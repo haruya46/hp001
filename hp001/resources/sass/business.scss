@@ -1,0 +1,137 @@
+.content{
+    position: relative;
+
+    .center{
+        position: absolute;
+        transform: translateX(65%);  /* 水平中央寄せ */
+        z-index: 5;
+        text-align: center;
+        width: 646px;
+        margin-bottom: 40px;
+
+        .bg-color{
+            background-color: rgb(255, 255, 255);
+            padding-top: 100px;
+            padding-bottom:100px ;
+            border-radius:0 0 20px 20px ;
+
+            // top
+            .top{
+                .top-image{
+
+                    display: inline;
+                    width:100%;
+                    height: 500px;
+                    position: relative;
+                    
+                    img{
+                        width: 100%;
+                        height: 500px;
+                        object-fit:cover;
+                        object-position: 0px -30px ;
+                        box-shadow: 0px -16px 20px rgba(255, 153, 0, 0.2), /* 上方向の影 */
+                        0px 16px 20px rgba(255, 153, 0, 0.2);  /* 下方向の影 */
+                    }
+        
+                    p{
+                        position: absolute;
+                        bottom:90px;
+                        left: -85px;
+                        font-size: 20px;
+                        color: #ffffff;
+
+                        
+                    }
+                    h3{
+                        position: absolute;
+                        bottom:50px;
+                        left: -80px;
+                        font-size: 34px;
+                        color: #ffffff;
+
+                    }
+                }
+                
+            }
+
+            .explanation{
+                margin-top: 200px;
+                .explanation-title{
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            }
+            
+            
+            .content-menu{
+                margin: 100px 10% 0 10%;
+                border: 1px solid black;
+                position: relative;
+                padding-bottom:100px ;
+                
+                .number{
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    top: -50px;
+                    left: 200px;
+                    color:#ffffff;
+                    background-color: #EF9C66;
+                    border: 1px solid #EF9C66;
+                    border-radius: 300px;
+                    font-size: 80px;
+                    padding-top:-10px ;
+                    
+        
+                }
+                .sab-title{
+                    margin-top: 100px;
+                }
+                .title{
+                    font-size: 32px;
+                    color: #EF9C66;
+                    margin-bottom: 20px;
+        
+                }
+                .content-img{
+                    width: 80%;
+                    margin: 0 auto;
+                    position: relative;
+        
+                    .more{
+                        position: absolute;
+                        bottom: -90px;
+                        left: 80px;
+                        padding: 20px 30px;
+                        background-color: #ffffff;
+                        width: 250px;
+                        
+                        p{
+                            font-size:15px ;
+                        }
+                        .link{
+                            margin-top: 20px;
+                            border: 1px solid #EF9C66;
+                            border-radius: 30px;
+                            padding: 0 50px;
+                            color: #EF9C66;
+                        }
+            
+                    }
+                }
+            }
+        }
+        .footer-content{
+            color: #FFFFFF;
+            text-align: center;
+            margin:100px
+        }
+
+        
+        
+        
+        
+        
+    }
+
+}
