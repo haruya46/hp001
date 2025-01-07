@@ -16,6 +16,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+       
+        
+        
         {{-- jquery --}}
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -47,7 +50,7 @@
     <body>
         {{-- サイドバー --}}
         <div class="sidebar krona-one-regular">
-            <h1 class="sidebar__title"><a href="{{route("toppage")}}">I-Trek</h1>
+            <h1 class="sidebar__title"><a href="{{route("toppage")}}">I-Trek</a></h1>
             <ul class="sidebar__menu">
                 <li class="sidebar__menu-item"><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
                 <li class="sidebar__menu-item"><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tops', function (Blueprint $table) {
+        Schema::create('toppages', function (Blueprint $table) {
             $table->id();
-            $table->text('text');
+            $table->text('title');
             $table->text('business-image');
             $table->text('business-text');
             $table->text('recruit-image');
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('company-hand-text');
             $table->text('company-image');
             $table->text('company-text');
+            $table->text('backgrand-image');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tops');
+        Schema::dropIfExists('toppages');
     }
 };

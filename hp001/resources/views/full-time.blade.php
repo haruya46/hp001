@@ -34,17 +34,30 @@
             <div class="bg-color">
 
                 <div class="top">
+                    <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
+                    <div class="menu-hamburger">
+                        <input type="checkbox" id="overlay-input" />
+                        <label for="overlay-input" id="overlay-button"><span></span></label>
+                        <div id="overlay">
+                            <ul>
+                                <li><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
+                                <li><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>
+                                <li><a href="{{route("company")}}" class="sidebar__menu-link">COMPANY</a></li>
+                                <li><a href="{{route("contact")}}" class="sidebar__menu-link">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
                     <div class="top-image">
     
                         <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
-                        <div class="top-title-area">
+                        <div class="top-title-area krona-one-regular">
                             <p>Recruit</p>
                             <span></span>
                             <h3>正社員採用</h3>
 
                         </div>
                     </div>
-                    <p class="top-bottom-text">ここにテキストここにキスとここにテキスト</p>
     
                 </div>
                 <div class="company-goal">
@@ -54,7 +67,7 @@
                     <img src="{{asset('storage/image/002.png')}}" alt="">
                 </div>
                 <div class="recruitment">
-                    <p class="recruitment-title">募集要項</p>
+                    <p class="recruitment-title krona-one-regular">募集要項</p>
                     <span class="recruitment-span"></span>
                     <div class="recruitment-content">
                         <p class="content-title">仕事内容</p>
@@ -68,7 +81,7 @@
                 </div>
                 <div class="location">
                     <div class="location-background">
-                        <p class="location-title">〇〇本社</p>
+                        <p class="location-title krona-one-regular">〇〇本社</p>
                         <span class="location-span"></span>
                         <div class="location-img">
                             <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
@@ -125,7 +138,7 @@
                         <p>ファイル添付（履歴書と職務経歴書）</p>
                         <input type="file">
 
-                        <div class="sabmit">
+                        <div class="sabmit krona-one-regular">
                             <input type="submit">
                         </div>
 
@@ -136,7 +149,7 @@
 
                 
             </div>
-            <div class="footer-content">
+            <div class="footer-content krona-one-regular">
                 <p>aaaa</p>
             </div>
             

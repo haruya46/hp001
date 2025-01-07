@@ -33,7 +33,21 @@
             <div class="bg-color">
 
                 <div class="top">
-                    <div class="top-image">
+                    <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
+                    <div class="menu-hamburger">
+                        <input type="checkbox" id="overlay-input" />
+                        <label for="overlay-input" id="overlay-button"><span></span></label>
+                        <div id="overlay">
+                            <ul>
+                                <li><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
+                                <li><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>
+                                <li><a href="{{route("company")}}" class="sidebar__menu-link">COMPANY</a></li>
+                                <li><a href="{{route("contact")}}" class="sidebar__menu-link">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="top-image krona-one-regular">
     
                         <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
                         <p>事業・サービスについて</p>
@@ -41,53 +55,53 @@
                     </div>
     
                 </div>
-                <div class="explanation">
-                    <p class="explanation-title">事業の説明</p>
+                <div class="explanation krona-one-regular">
+                    <p class="explanation-title ">事業の説明</p>
                     <span></span>
                     <p>ここにテキストここにテキスト</p>
                 </div>
                 <div class="content-menu">
                     <p class="number">1</p>
-                    <p class="sab-title">mobile sales</p>
-                    <p class="title">人材派遣</p>
+                    <p class="sab-title krona-one-regular">mobile sales</p>
+                    <p class="title krona-one-regular">人材派遣</p>
                     <div class="content-img">
                         <img src="{{asset('storage/image/31280990_s.jpg')}}" alt="">
                         <div class="more">
                             <p>ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
                             
-                            <p class="link"><a href="{{route('mobile')}}">more</a></p>
+                            <p class="link krona-one-regular"><a href="{{route('mobile')}}">more</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="content-menu">
                     <p class="number">2</p>
-                    <p class="sab-title">pest</p>
-                    <p class="title">害虫駆除</p>
+                    <p class="sab-title krona-one-regular">pest</p>
+                    <p class="title krona-one-regular">害虫駆除</p>
                     <div class="content-img">
                         <img src="{{asset('storage/image/31280990_s.jpg')}}" alt="">
                         <div class="more">
                             <p>ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
-                            <p class="link"><a href="{{route('pest')}}">more</a></p>
+                            <p class="link krona-one-regular"><a href="{{route('pest')}}">more</a></p>
     
                         </div>
                     </div>
                 </div>
                 <div class="content-menu">
                     <p class="number">3</p>
-                    <p class="sab-title">ses</p>
-                    <p class="title">SES</p>
+                    <p class="sab-title krona-one-regular">ses</p>
+                    <p class="title krona-one-regular">SES</p>
                     <div class="content-img">
                         <img src="{{asset('storage/image/31280990_s.jpg')}}" alt="">
                         <div class="more">
                             <p>ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
-                            <p class="link"><a href="{{route('ses')}}">more</a></p>
+                            <p class="link krona-one-regular"><a href="{{route('ses')}}">more</a></p>
     
                         </div>
                     </div>
                 </div>
           
             </div>
-            <div class="footer-content">
+            <div class="footer-content krona-one-regular">
                 <p>2025@I-Trek</p>
             </div>
             
