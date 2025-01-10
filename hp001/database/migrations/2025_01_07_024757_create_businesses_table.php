@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('businesses', function (Blueprint $table) {
             $table->id();
-            $table->text("top-image");
-            $table->text("explanation-title");
-            $table->text("explanation-title-p");
-            $table->text("content-img-1");
-            $table->text("more-text-1");
-            $table->text("content-img-2");
-            $table->text("more-text-2");
-            $table->text("content-img-3");
-            $table->text("more-text-3");
-            $table->text("background-image");
+            $table->text("top_image");
+            $table->text("explanation_title");
+            $table->text("explanation_title_p");
+            $table->text("content_img_1");
+            $table->text("more_text_1");
+            $table->text("content_img_2");
+            $table->text("more_text_2");
+            $table->text("content_img_3");
+            $table->text("more_text_3");
+            $table->text("background_image");
             $table->timestamps();
         });
     }

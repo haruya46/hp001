@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('recruits', function (Blueprint $table) {
             $table->id();
             $table->text("handwriting");
-            $table->text("one-word-title");
-            $table->text("one-word-text");
-            $table->text("krona-one-regular");
-            $table->text("krona-one-regular-text");
-            $table->text("krona-one-regular-image");
-            $table->text("company-messeage-title");
-            $table->text("company-messeage-item1");
-            $table->text("company-messeage-item2");
-            $table->text("company-messeage-area-image");
-            $table->text("background-image");
+            $table->text("one_word_title");
+            $table->text("one_word_text");
+            $table->text("krona_one_regular");
+            $table->text("krona_one_regular_text");
+            $table->text("krona_one_regular_image");
+            $table->text("company_messeage_title");
+            $table->text("company_messeage_item1");
+            $table->text("company_messeage_item2");
+            $table->text("company_messeage_area_image");
+            $table->text("background_image");
             $table->timestamps();
         });
     }

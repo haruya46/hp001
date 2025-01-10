@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Toppage;
 use Illuminate\Http\Request;
+
+use function Laravel\Prompts\text;
 
 class AdminController extends Controller
 {
@@ -25,9 +28,17 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function topstore(Request $request)
     {
-        //
+        $toppage=new Toppage();
+        $toppage->title=$request->title;
+        $toppage-> business_image = $request->business_image;
+        $toppage-> business_text = $request->business_text;
+        $toppage-> recruit_image = $request->recruit_image;
+        $toppage-> business_text = $request->business_text;
+        $toppage-> company_hand_text = $request->company_hand_text;
+        $toppage->save();
+
     }
 
     /**

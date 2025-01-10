@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('toppages', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('business-image');
-            $table->text('business-text');
-            $table->text('recruit-image');
-            $table->text('recruit-text');
-            $table->text('company-hand-text');
-            $table->text('company-image');
-            $table->text('company-text');
-            $table->text('backgrand-image');
+            $table->text('business_image');
+            $table->text('business_text');
+            $table->text('recruit_image');
+            $table->text('recruit_text');
+            $table->text('company_hand_text');
+            $table->text('company_image');
+            $table->text('company_text');
+            $table->text('backgrand_image');
             $table->timestamps();
         });
     }

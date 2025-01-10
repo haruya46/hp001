@@ -6,5 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Toppage extends Model
 {
-    //
+    use HasFactory;
+    protected $fillable = [
+        'title',
+        'business_image',
+        'business_text',
+        'recruit_image',
+        'recruit_text',
+        'company_hand_text',
+        'company_image',
+        'company_text',
+        'backgrand_image',
+    ];
 }
