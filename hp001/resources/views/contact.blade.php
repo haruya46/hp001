@@ -33,6 +33,24 @@
     <div class="content">
         <div class="center">
             <div class="bg-color">
+                
+                <div class="top">
+                    <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
+                    <div class="menu-hamburger">
+                        <input type="checkbox" id="overlay-input" />
+                        <label for="overlay-input" id="overlay-button"><span></span></label>
+                        <div id="overlay">
+                            <ul>
+                                <li><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
+                                <li><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>
+                                <li><a href="{{route("company")}}" class="sidebar__menu-link">COMPANY</a></li>
+                                <li><a href="{{route("contact")}}" class="sidebar__menu-link">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+    
+                </div>
                 <div class="application">
                     <div class="application-img">
 
