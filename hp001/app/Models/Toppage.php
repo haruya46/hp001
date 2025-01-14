@@ -3,10 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use HasFactory;
 
 class Toppage extends Model
 {
-    use HasFactory;
     protected $fillable = [
         'title',
         'business_image',

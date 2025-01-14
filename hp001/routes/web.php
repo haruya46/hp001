@@ -31,7 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/admin', 'admin')->name('admin.admin');
         Route::get('/create', 'create')->name('admin.create');
-        Route::get('/store', 'topstore')->name('admin.topstore');
+        Route::post('/topstore', 'topstore')->name('admin.topstore');
+        Route::post('/recruitstore', 'recruitstore')->name('admin.recruitstore');
         
     });
 });

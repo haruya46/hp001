@@ -114,7 +114,7 @@
                 
             </div>
             <div class="footer-content krona-one-regular">
-                <p>2025@i-trek</p>
+                <p>＠<?php echo date("Y"); ?>（株）I-Trek</p>
             </div>
             
         </div>

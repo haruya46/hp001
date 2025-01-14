@@ -125,7 +125,7 @@
              
             </div>
             <div class="footer-content krona-one-regular">
-                <p>aaaa</p>
+                <p>＠<?php echo date("Y"); ?>（株）I-Trek</p>
             </div>
             
         </div>

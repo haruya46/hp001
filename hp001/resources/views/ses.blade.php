@@ -99,7 +99,7 @@
                 
             </div>
             <div class="footer-content">
-                <p>aaaa</p>
+                <p>＠<?php echo date("Y"); ?>（株）I-Trek</p>
             </div>
             
         </div>
