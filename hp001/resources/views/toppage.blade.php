@@ -2,7 +2,7 @@
     <style>
    
         .background--1 {
-            background-image:url('{{asset('storage/image/top.png')}}') ;
+            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
 
@@ -11,14 +11,14 @@
         }
 
         .background--3 {
-            background-image:url('{{asset('storage/image/top.png')}}') ;
+            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
         .background--4 {
             background-color: #EF9C66; 
         }
         .background--5 {
-            background-image:url('{{asset('storage/image/top.png')}}') ;
+            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
         .business-backgurand{
@@ -47,7 +47,7 @@
     {{-- レスポンシブメニューバー --}}
     <div class="top">
         <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
-        <p class="top-text new-tegomin-regular">ここに手書き風テキスト</p>
+        <p class="top-text new-tegomin-regular">{{$toppage->title}}</p>
         <div class="menu-hamburger">
             <input type="checkbox" id="overlay-input" />
             <label for="overlay-input" id="overlay-button"><span></span></label>
@@ -73,10 +73,10 @@
                         <p class="business-sab-title krona-one-regular">事業について</p>
                         <h2 class="business-title krona-one-regular">BUSINESS</h2>
                     </div>
-                    <img src="{{ asset('storage/image/29952316_s.jpg') }}" alt="" class="business-img">
+                    <img src="{{ asset('storage/images/'.$toppage->business_image) }}" alt="" class="business-img">
                     <div class="business-text-area">
         
-                        <p class="business-text">企業理念などの文章ここにきてストを入力</p>
+                        <p class="business-text">{{$toppage->business_text}}</p>
                     </div>
                     <div class="business-btn krona-one-regular">
                         <a href="{{route('business')}}">MORE</a>
@@ -90,9 +90,9 @@
                         <p class="recruit-sab-title krona-one-regular">採用について</p>
                         <h2 class="recruit-title krona-one-regular">RECRUIT</h2>
                     </div>
-                    <img src="{{ asset('storage/image/3190928_s.jpg') }}" alt="" class="recruit-img">
+                    <img src="{{ asset('storage/images/'.$toppage->recruit_image) }}" alt="" class="recruit-img">
                     <div class="recruit-text-area">
-                        <p class="recruit-text">企業理念などの文章ここにきてストを入力</p>
+                        <p class="recruit-text">{{$toppage->recruit_text}}</p>
                     </div>
                     <div class="recruit-btn krona-one-regular">
                         <a href="{{route('recruit')}}">MORE</a>
@@ -106,11 +106,11 @@
                         <h2 class="company-title krona-one-regular">COMPANY</h2>
                     </div>
                     <div class="company-image-area">
-                        <img src="{{ asset('storage/image/29809731_s.jpg') }}" alt="" class="company-img">
-                        <p class="company-img-text new-tegomin-regular">ここに手書き風テキスト</p>
+                        <img src="{{ asset('storage/images/'.$toppage->company_image) }}" alt="" class="company-img">
+                        <p class="company-img-text new-tegomin-regular">{{$toppage->company_hand_text}}</p>
                     </div>
                     <div class="company-text-area">
-                        <p class="company-text">企業理念などの文章ここにきてストを入力</p>
+                        <p class="company-text">{{$toppage->company_text}}</p>
                     </div>
                     <div class="company-btn krona-one-regular">
                         <a href="{{route('company')}}">MORE</a>

@@ -4,29 +4,52 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+use App\Models\Toppage;
+use App\Models\recruit;
+use App\Models\business;
+use App\Models\Company;
+use App\Models\ses;
+use App\Models\Mobile;
+use App\Models\Pest;
+use App\Models\fulltime;
+use App\Models\parttime;
+use App\Models\selfemployed;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactForm;
+
 class HpController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function toppage()
+    public function toppage(Toppage $toppage)
     {
-        return view('toppage');
+        $toppage= $toppage->where('id', 1)->first();
+
+        return view('toppage', compact('toppage'));
     }
 
-    public function business()
+    public function business(business $business)
     {
-        return view('business');
+        $business= $business->where('id', 1)->first();
+
+        return view('business', compact('business'));
+
     }
 
-    public function recruit()
+    public function recruit(recruit $recruit)
     {
-        return view('recruit');
+        $recruit= $recruit->where('id', 1)->first();
+
+        return view('recruit', compact('recruit'));
     }
 
-    public function company()
+    public function company(Company $company)
     {
-        return view('company');
+        $company= $company->where('id', 1)->first();
+
+        return view('company', compact('company'));
     }
 
     public function contact()
@@ -34,82 +57,48 @@ class HpController extends Controller
         return view('contact');
     }
 
-    public function fulltime()
+    public function fulltime(fulltime $fulltime)
     {
-        return view('full-time');
+        $recruit_content= $fulltime->where('id', 1)->first();
+
+        return view('full-time', compact('recruit_content'));
     }
 
-    public function mobile()
+    public function parttime(parttime $parttime)
     {
-        return view('mobile');
-    }
+        $recruit_content= $parttime->where('id', 1)->first();
 
-    public function parttime()
-    {
-        return view('part-time');
-    }
-
-    public function pest()
-    {
-        return view('pest');
-    }
-
-    public function selfemployed()
-    {
-        return view('Self-employed');
+        return view('part-time', compact('recruit_content'));
     }
     
-    public function ses()
+    public function selfemployed(selfemployed $selfemployed)
     {
-        return view('ses');
+        $recruit_content= $selfemployed->where('id', 1)->first();
+
+        return view('Self-employed', compact('recruit_content'));
+    }
+    public function mobile(Mobile $mobile)
+    {
+        $business_content= $mobile->where('id', 1)->first();
+
+        return view('mobile', compact('business_content'));
     }
 
+
+    public function pest(Pest $pest)
+    {
+        $business_content= $pest->where('id', 1)->first();
+
+        return view('pest', compact('business_content'));
+    }
     
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function ses(Ses $ses)
     {
-        //
+        $business_content= $ses->where('id', 1)->first();
+
+        return view('ses', compact('business_content'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+  
 }

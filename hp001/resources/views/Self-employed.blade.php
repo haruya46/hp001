@@ -1,9 +1,8 @@
 
-
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
 
@@ -11,7 +10,7 @@
             background-color: #EF9C66; /* 緑 */
         }
         .background--3 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
         .background--4 {
@@ -19,7 +18,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -51,63 +50,63 @@
                     </div>
                     <div class="top-image">
     
-                        <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                        <img src="{{asset('storage/images/'.$recruit_content->application_img)}}" alt="">
                         <div class="top-title-area krona-one-regular">
                             <p>Recruit</p>
                             <span></span>
-                            <h3>個人事業主</h3>
+                            <h3>個人事業主採用</h3>
 
                         </div>
                     </div>
     
                 </div>
                 <div class="company-goal">
-                    <p>どのような会社を目指しているかなどの文章ここにテキストここにテキストここにテキスト</p>
+                    <p>{{$recruit_content->company_goal}}</p>
                 </div>
                 <div class="recruitment-img">
-                    <img src="{{asset('storage/image/002.png')}}" alt="">
+                    <img src="{{asset('storage/images/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
                 </div>
                 <div class="recruitment">
                     <p class="recruitment-title krona-one-regular">募集要項</p>
                     <span class="recruitment-span"></span>
                     <div class="recruitment-content">
-                        <p class="content-title">仕事内容</p>
-                        <p class="content-p">ここにテキストここにテキスト</p>
-                        <p  class="content-title" >雇用形態</p>
-                        <p class="content-p">ここにテキストここにテキスト</p>
-                        <p  class="content-title" >勤務地</p>
-                        <p class="content-p">ここにテキストここにテキスト</p>
+                        <p class="content-title">{{$recruit_content->content_title_1}}</p>
+                        <p class="content-p">{{$recruit_content->content_p_1}}</p>
+                        <p  class="content-title" >{{$recruit_content->content_title_2}}</p>
+                        <p class="content-p">{{$recruit_content->content_p_2}}</p>
+                        <p  class="content-title" >{{$recruit_content->content_title_3}}</p>
+                        <p class="content-p">{{$recruit_content->content_p_3}}</p>
                         
                     </div>
                 </div>
                 <div class="location">
                     <div class="location-background">
-                        <p class="location-title krona-one-regular">〇〇本社</p>
+                        <p class="location-title krona-one-regular">{{$recruit_content->location_title}}</p>
                         <span class="location-span"></span>
                         <div class="location-img">
-                            <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
-                            <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
-                            <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_1)}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_2)}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_3)}}" alt="">
                         </div>
                         <div class="location-text-area">
-                            <p>住所をここに入力</p>
-                            <p>ここにて雰囲気などを入力</p>
+                            <p>{{$recruit_content->location_text_area_1}}</p>
+                            <p>{{$recruit_content->location_text_area_2}}</p>
 
                         </div>
 
                     </div>
                 </div>
                 <div class="recruitment-content">
-                    <p  class="content-title">給与</p>
-                    <p>ここにテキストここにテキスト</p>
-                    <p  class="content-title">賞与</p>
-                    <p >ここにテキストここにテキスト</p>
-                    <p  class="content-title">昇給</p>
-                    <p>ここにテキストここにテキスト</p>
-                    <p class="content-title">待遇・福利厚生</p>
-                    <p>ここにテキストここにテキスト</p>
-                    <p class="content-title">休日・休暇</p>
-                    <p>ここにテキストここにテキスト</p>
+                    <p  class="content-title">{{$recruit_content->content_title_4}}</p>
+                    <p>{{$recruit_content->content_p_4}}</p>
+                    <p  class="content-title">{{$recruit_content->content_title_5}}</p>
+                    <p >{{$recruit_content->content_p_5}}</p>
+                    <p  class="content-title">{{$recruit_content->content_title_6}}</p>
+                    <p>{{$recruit_content->content_p_6}}</p>
+                    <p class="content-title">{{$recruit_content->content_title_7}}</p>
+                    <p>{{$recruit_content->content_p_7}}</p>
+                    <p class="content-title">{{$recruit_content->content_title_8}}</p>
+                    <p>{{$recruit_content->content_p_8}}</p>
                     
                 </div>
                 <div class="application">
@@ -139,7 +138,7 @@
                         <p>ファイル添付（履歴書と職務経歴書）</p>
                         <input type="file">
 
-                        <div class="sabmit">
+                        <div class="sabmit krona-one-regular">
                             <input type="submit">
                         </div>
 

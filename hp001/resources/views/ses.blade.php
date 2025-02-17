@@ -2,7 +2,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
             background-size:cover;
         }
 
@@ -11,7 +11,7 @@
         }
 
         .background--3 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
             background-size:cover;
         }
         
@@ -20,7 +20,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="top-image">
     
-                        <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                        <img src="{{asset('storage/images/'.$business_content->top_image)}}" alt="">
                         <div class="top-title-area">
                             <p>System Engineering Service</p>
                             <span></span>
@@ -60,39 +60,39 @@
 
                         </div>
                     </div>
-                    <p class="top-bottom-text">ここにテキストここにキスとここにテキスト</p>
+                    <p class="top-bottom-text">{{$business_content->top_bottom_text}}</p>
     
                 </div>
                 <div class="content-item1">
-                    <p class="content-text">ここにテキストここにテキストここにてk市うとトここにテキストここにてk市うとトここにテキストここにてk市うとトここにテキストここにてk市うとトここにテキストここにてk市うと</p>
-                    <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="イラストや写真">
+                    <p class="content-text">{{$business_content->content_text}}</p>
+                    <img src="{{asset('storage/images/'.$business_content->content_text_image)}}" alt="イラストや写真">
                 </div>
                 <div class="business">
-                    <p class="business-title">SESの魅力</p>
+                    <p class="business-title">{{$business_content->business_title}}</p>
                     <span class="business-span"></span>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>1</p>
                         </div>
-                        <p class="business-sab-title">ここに魅力を入力ここ魅力を入力</p>
-                        <p class="business-item-text">ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
-                        <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                        <p class="business-sab-title">{{$business_content->business_sab_title_1}}</p>
+                        <p class="business-item-text">{{$business_content->business_item_text_1}}</p>
+                        <img src="{{asset('storage/images/'.$business_content->business_item_image_1)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>2</p>
                         </div>
-                        <p class="business-sab-title">ここに魅力を入力ここ魅力を入力</p>
-                        <p class="business-item-text">ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
-                        <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                        <p class="business-sab-title">{{$business_content->business_sab_title_2}}</p>
+                        <p class="business-item-text">{{$business_content->business_item_text_2}}</p>
+                        <img src="{{asset('storage/images/'.$business_content->business_item_image_2)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>3</p>
                         </div>
-                        <p class="business-sab-title">ここに魅力を入力ここ魅力を入力</p>
-                        <p class="business-item-text">ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト</p>
-                        <img src="{{asset('storage/image/31014149_s.jpg')}}" alt="">
+                        <p class="business-sab-title">{{$business_content->business_sab_title_3}}</p>
+                        <p class="business-item-text">{{$business_content->business_item_text_3}}</p>
+                        <img src="{{asset('storage/images/'.$business_content->business_item_image_3)}}" alt="">
                     </div>
                 </div>
 
