@@ -16,7 +16,7 @@
                     <div>
                     <input id="image" type="file" name="backgrand_image" >
                     </div>
-                    <img src="{{ asset('storage/images/'.$toppage->backgrand_image)}}" class="mx-auto" style="height:300px;">
+                    <img src="{{ asset('storage/'.$toppage->backgrand_image)}}" class="mx-auto" style="height:300px;">
 
 
                     <label for="body" class="font-semibold leading-none mt-4">手書き風テキスト</label>
@@ -26,7 +26,7 @@
                     <label for="image" class="font-semibold leading-none mt-4">事業画像</label>
                     <div>
                     <input id="image" type="file" name="business_image">
-                    <img src="{{ asset('storage/images/'.$toppage->business_image)}}" class="mx-auto" style="height:300px;">
+                    <img src="{{ asset('storage/'.$toppage->business_image)}}" class="mx-auto" style="height:300px;">
                     </div>
                     <label for="body" class="font-semibold leading-none mt-4">事業について->事業に関する一言</label>
                     <textarea name="business_text" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('business_text',$toppage->business_text)}}</textarea>
@@ -35,7 +35,7 @@
                     <label for="image" class="font-semibold leading-none mt-4">採用画像</label>
                     <div>
                     <input id="image" type="file" name="recruit_image">
-                    <img src="{{ asset('storage/images/'.$toppage->recruit_image)}}" class="mx-auto" style="height:300px;">
+                    <img src="{{ asset('storage/'.$toppage->recruit_image)}}" class="mx-auto" style="height:300px;">
                     </div>
                     <label for="body" class="font-semibold leading-none mt-4">採用について->採用に関する一言</label>
                     <textarea name="recruit_text" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('recruit_text',$toppage->recruit_text)}}</textarea>
@@ -44,7 +44,7 @@
                     <label for="image" class="font-semibold leading-none mt-4">会社について->画像</label>
                     <div>
                     <input id="company-image" type="file" name="company_image">
-                    <img src="{{ asset('storage/images/'.$toppage->company_image)}}" class="mx-auto" style="height:300px;">
+                    <img src="{{ asset('storage/'.$toppage->company_image)}}" class="mx-auto" style="height:300px;">
                     </div>
                     <label for="body" class="font-semibold leading-none mt-4">手書き風テキスト</label>
                     <textarea name="company_hand_text" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('company_hand_text',$toppage->company_hand_text)}}</textarea>

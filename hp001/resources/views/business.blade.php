@@ -1,7 +1,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset("storage/images/".$business->background_image)}}');
+            background-image:url('{{asset("storage/".$business->background_image)}}');
             background-size:cover;
         }
 
@@ -10,14 +10,14 @@
         }
 
         .background--3 {
-            background-image:url('{{asset("storage/images/".$business->background_image)}}');
+            background-image:url('{{asset("storage/".$business->background_image)}}');
             background-size:cover;
         }
         .background--4 {
             background-color: #EF9C66;
         }
         .background--5 {
-            background-image:url('{{asset("storage/images/".$business->background_image)}}');
+            background-image:url('{{asset("storage/".$business->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="top-image krona-one-regular">
     
-                        <img src="{{asset('storage/images/'.$business->top_image)}}" alt="">
+                        <img src="{{asset('storage/'.$business->top_image)}}" alt="">
                         <p>事業・サービスについて</p>
                         <h3>BUSINESS</h3>
                     </div>
@@ -65,7 +65,7 @@
                     <p class="sab-title krona-one-regular">Staffing</p>
                     <p class="title krona-one-regular">人材派遣</p>
                     <div class="content-img">
-                        <img src="{{asset('storage/images/'.$business->content_img_1)}}" alt="">
+                        <img src="{{asset('storage/'.$business->content_img_1)}}" alt="">
                         <div class="more">
                             <p>{{$business->more_text_1}}</p>
                             
@@ -78,7 +78,7 @@
                     <p class="sab-title krona-one-regular">pest</p>
                     <p class="title krona-one-regular">害虫駆除</p>
                     <div class="content-img">
-                        <img src="{{asset('storage/images/'.$business->content_img_2)}}" alt="">
+                        <img src="{{asset('storage/'.$business->content_img_2)}}" alt="">
                         <div class="more">
                             <p>{{$business->more_text_2}}</p>
                             <p class="link krona-one-regular"><a href="{{route('pest')}}">more</a></p>
@@ -91,7 +91,7 @@
                     <p class="sab-title krona-one-regular">System Engineering Service</p>
                     <p class="title krona-one-regular">SES</p>
                     <div class="content-img">
-                        <img src="{{asset('storage/images/'.$business->content_img_3)}}" alt="">
+                        <img src="{{asset('storage/'.$business->content_img_3)}}" alt="">
                         <div class="more">
                             <p>{{$business->more_text_3}}</p>
                             <p class="link krona-one-regular"><a href="{{route('ses')}}">more</a></p>

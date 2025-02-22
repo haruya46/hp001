@@ -2,7 +2,7 @@
     <style>
    
         .background--1 {
-            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
+            background-image:url('{{asset('storage/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
 
@@ -11,14 +11,14 @@
         }
 
         .background--3 {
-            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
+            background-image:url('{{asset('storage/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
         .background--4 {
             background-color: #EF9C66; 
         }
         .background--5 {
-            background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
+            background-image:url('{{asset('storage/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
         }
         .business-backgurand{
@@ -73,7 +73,7 @@
                         <p class="business-sab-title krona-one-regular">事業について</p>
                         <h2 class="business-title krona-one-regular">BUSINESS</h2>
                     </div>
-                    <img src="{{ asset('storage/images/'.$toppage->business_image) }}" alt="" class="business-img">
+                    <img src="{{ asset('storage/'.$toppage->business_image) }}" alt="" class="business-img">
                     <div class="business-text-area">
         
                         <p class="business-text">{{$toppage->business_text}}</p>
@@ -90,7 +90,7 @@
                         <p class="recruit-sab-title krona-one-regular">採用について</p>
                         <h2 class="recruit-title krona-one-regular">RECRUIT</h2>
                     </div>
-                    <img src="{{ asset('storage/images/'.$toppage->recruit_image) }}" alt="" class="recruit-img">
+                    <img src="{{ asset('storage/'.$toppage->recruit_image) }}" alt="" class="recruit-img">
                     <div class="recruit-text-area">
                         <p class="recruit-text">{{$toppage->recruit_text}}</p>
                     </div>
@@ -106,7 +106,7 @@
                         <h2 class="company-title krona-one-regular">COMPANY</h2>
                     </div>
                     <div class="company-image-area">
-                        <img src="{{ asset('storage/images/'.$toppage->company_image) }}" alt="" class="company-img">
+                        <img src="{{ asset('storage/'.$toppage->company_image) }}" alt="" class="company-img">
                         <p class="company-img-text new-tegomin-regular">{{$toppage->company_hand_text}}</p>
                     </div>
                     <div class="company-text-area">

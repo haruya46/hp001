@@ -60,26 +60,24 @@
                     <div class="application-text">
                         <p>お問い合わせはこちらから</p>
                     </div>
-
                     <div class="application-from">
                         <p class="application-from-text">下記のフォームに必要事項を入力後、「送信」ボタンを押して下さい</p>
-                        <from>
+                        <form method="post" action="{{route('contact_store')}}" enctype="multipart/form-data">
                         @csrf
-                        @method('post')
                         <p>お名前</p>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" name="name">
                         <p>メールアドレス</p>
-                        <input type="mail" class="input-text">
+                        <input type="mail" class="input-text" name="email">
                         <p>電話番号</p>
-                        <input type="tel" class="input-text">
+                        <input type="tel" class="input-text" name="tel">
                         <p>お問い合わせ内容</p>
-                        <textarea  class="input-text-textarea" cols="30" rows="30"></textarea>
+                        <textarea  class="input-text-textarea" cols="30" rows="30" name="content"></textarea>
 
                         <div class="sabmit">
                             <input type="submit">
                         </div>
 
-                        </from>
+                        </form>
 
                     </div>
                 </div>

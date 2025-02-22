@@ -2,7 +2,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
+            background-image:url('{{asset("storage/".$business_content->background_image)}}');
             background-size:cover;
         }
 
@@ -11,7 +11,7 @@
         }
 
         .background--3 {
-            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
+            background-image:url('{{asset("storage/".$business_content->background_image)}}');
             background-size:cover;
         }
         
@@ -20,7 +20,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset("storage/images/".$business_content->background_image)}}');
+            background-image:url('{{asset("storage/".$business_content->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="top-image">
     
-                        <img src="{{asset('storage/images/'.$business_content->top_image)}}" alt="">
+                        <img src="{{asset('storage/'.$business_content->top_image)}}" alt="">
                         <div class="top-title-area">
                             <p>mobile sales</p>
                             <span></span>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="content-item1">
                     <p class="content-text">{{$business_content->content_text}}</p>
-                    <img src="{{asset('storage/images/'.$business_content->content_text_image)}}" alt="イラストや写真">
+                    <img src="{{asset('storage/'.$business_content->content_text_image)}}" alt="イラストや写真">
                 </div>
                 <div class="business">
                     <p class="business-title">{{$business_content->business_title}}</p>
@@ -76,7 +76,7 @@
                         </div>
                         <p class="business-sab-title">{{$business_content->business_sab_title_1}}</p>
                         <p class="business-item-text">{{$business_content->business_item_text_1}}</p>
-                        <img src="{{asset('storage/images/'.$business_content->business_item_image_1)}}" alt="">
+                        <img src="{{asset('storage/'.$business_content->business_item_image_1)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
@@ -84,7 +84,7 @@
                         </div>
                         <p class="business-sab-title">{{$business_content->business_sab_title_2}}</p>
                         <p class="business-item-text">{{$business_content->business_item_text_2}}</p>
-                        <img src="{{asset('storage/images/'.$business_content->business_item_image_2)}}" alt="">
+                        <img src="{{asset('storage/'.$business_content->business_item_image_2)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
@@ -92,7 +92,7 @@
                         </div>
                         <p class="business-sab-title">{{$business_content->business_sab_title_3}}</p>
                         <p class="business-item-text">{{$business_content->business_item_text_3}}</p>
-                        <img src="{{asset('storage/images/'.$business_content->business_item_image_3)}}" alt="">
+                        <img src="{{asset('storage/'.$business_content->business_item_image_3)}}" alt="">
                     </div>
                 </div>
 

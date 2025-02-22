@@ -2,7 +2,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
             background-size:cover;
         }
 
@@ -10,7 +10,7 @@
             background-color: #EF9C66; /* 緑 */
         }
         .background--3 {
-            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
             background-size:cover;
         }
         .background--4 {
@@ -18,7 +18,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="top-image">
     
-                        <img src="{{asset('storage/images/'.$recruit_content->application_img)}}" alt="">
+                        <img src="{{asset('storage/'.$recruit_content->application_img)}}" alt="">
                         <div class="top-title-area krona-one-regular">
                             <p>Recruit</p>
                             <span></span>
@@ -64,7 +64,7 @@
                     <p>{{$recruit_content->company_goal}}</p>
                 </div>
                 <div class="recruitment-img">
-                    <img src="{{asset('storage/images/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
+                    <img src="{{asset('storage/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
                 </div>
                 <div class="recruitment">
                     <p class="recruitment-title krona-one-regular">募集要項</p>
@@ -84,9 +84,9 @@
                         <p class="location-title krona-one-regular">{{$recruit_content->location_title}}</p>
                         <span class="location-span"></span>
                         <div class="location-img">
-                            <img src="{{asset('storage/images/'.$recruit_content->location_img_1)}}" alt="">
-                            <img src="{{asset('storage/images/'.$recruit_content->location_img_2)}}" alt="">
-                            <img src="{{asset('storage/images/'.$recruit_content->location_img_3)}}" alt="">
+                            <img src="{{asset('storage/'.$recruit_content->location_img_1)}}" alt="">
+                            <img src="{{asset('storage/'.$recruit_content->location_img_2)}}" alt="">
+                            <img src="{{asset('storage/'.$recruit_content->location_img_3)}}" alt="">
                         </div>
                         <div class="location-text-area">
                             <p>{{$recruit_content->location_text_area_1}}</p>

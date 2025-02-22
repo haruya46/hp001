@@ -99,6 +99,41 @@ class HpController extends Controller
         return view('ses', compact('business_content'));
     }
 
+    public function contact_store(Recruit $request)
+    {
+        $inputs = request()->all(); // フォームの全データを取得
+
+        Mail::to(config('mail.admin'))->send(new ContactForm($inputs));
+
+        return back();
+    }
+    public function recruit_contact_store(Request $request)
+    {
+        $inputs = $request->all(); // フォームの全データを取得
+        $filePath = null;
+
+        // ファイルがアップロードされた場合
+        if ($request->hasFile('file') && $request->file('file')->isValid()) {
+            $file = $request->file('file');
+            
+            // ファイルがPDFか確認
+            if ($file->getClientMimeType() === 'application/pdf') {
+                // ファイルを保存してパスを取得
+                $filePath = $file->store('attachments', 'public');
+            } else {
+                // PDF以外のファイルがアップロードされた場合のエラーハンドリング
+                return back()->withErrors(['file' => 'PDFファイルをアップロードしてください']);
+            }
+        }
+
+        // メール送信
+        Mail::to(config('mail.admin'))->send(new ContactForm($inputs, $filePath));
+
+        // メッセージを返してリダイレクト
+        return back()->with('message', 'お問い合わせが送信されました');
+    }
+
+
 
   
 }

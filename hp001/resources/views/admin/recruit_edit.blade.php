@@ -16,31 +16,31 @@
                 <label for="image" class="font-semibold leading-none mt-4">背景画像</label>
                 <div>
                 <input id="image" type="file" name="background_image">
-                <img src="{{ asset('storage/images/'.$recruit->background_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->background_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
                 <label for="image" class="font-semibold leading-none mt-4">トップ画像</label>
                 <div>
                 <input id="image" type="file" name="top_image">
-                <img src="{{ asset('storage/images/'.$recruit->top_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->top_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
                 <label for="image" class="font-semibold leading-none mt-4">正社員</label>
                 <div>
                 <input id="image" type="file" name="full_time_image">
-                <img src="{{ asset('storage/images/'.$recruit->full_time_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->full_time_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
                 <label for="image" class="font-semibold leading-none mt-4">アルバイト</label>
                 <div>
                 <input id="image" type="file" name="part_time_image">
-                <img src="{{ asset('storage/images/'.$recruit->part_time_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->part_time_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
                 <label for="image" class="font-semibold leading-none mt-4">個人事業主</label>
                 <div>
                 <input id="image" type="file" name="self_time_image">
-                <img src="{{ asset('storage/images/'.$recruit->self_time_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->self_time_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
                 <label for="body" class="font-semibold leading-none mt-4">手書き風テキスト</label>
@@ -61,7 +61,7 @@
                 <label for="image" class="font-semibold leading-none mt-4">画像</label>
                 <div>
                 <input id="image" type="file" name="krona_one_regular_image">
-                <img src="{{ asset('storage/images/'.$recruit->krona_one_regular_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->krona_one_regular_image)}}" class="mx-auto" style="height:300px;">
                 </div>
                 <label for="body" class="font-semibold leading-none mt-4">タイトル</label>
                 <textarea name="company_messeage_title" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('company_messeage_title',$recruit->company_messeage_title)}}</textarea>
@@ -75,7 +75,7 @@
                 <label for="image" class="font-semibold leading-none mt-4">画像</label>
                 <div>
                 <input id="image" type="file" name="company_messeage_area_image">
-                <img src="{{ asset('storage/images/'.$recruit->company_messeage_area_image)}}" class="mx-auto" style="height:300px;">
+                <img src="{{ asset('storage/'.$recruit->company_messeage_area_image)}}" class="mx-auto" style="height:300px;">
                 </div>
 
 
