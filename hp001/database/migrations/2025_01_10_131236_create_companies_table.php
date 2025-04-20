@@ -28,7 +28,7 @@ return new class extends Migration
             $table->text("company_category_1");
             $table->text("company_category_text_1");
             $table->text("company_category_2");
-            $table->text("company_category-text_2");
+            $table->text("company_category_text_2");
             $table->text("company_category_3");
             $table->text("company_category_text_3");
             $table->text("company_category_4");
