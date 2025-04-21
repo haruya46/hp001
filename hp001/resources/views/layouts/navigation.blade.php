@@ -142,13 +142,87 @@
             <x-responsive-nav-link :href="route('admin.admin')">
                 管理者画面
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('register')">
-                管理者追加
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('admin.top_edit')">
-                トップページ編集画面
-            </x-responsive-nav-link>
+            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <x-responsive-nav-link :href="route('admin.admin')">
+                    admin
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('register')">
+                    admin_user
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('admin.top_edit')">
+                    top
+                </x-responsive-nav-link>
+        
+                {{-- recruit-pull-down --}}
+                <x-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <div class="mt-4">recruit</div>
+        
+                            <div class="ms-1">
+                                <svg class="fill-current h-4 w-4 mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+        
+                    <x-slot name="content">
+                        <div class="mt-2">
+                            <x-dropdown-link :href="route('admin.recruit_edit')">
+                                recruit
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.parttime_edit')">
+                                パート
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.fulltime_edit')">
+                                正社員
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.selfemployed_edit')">
+                                個人事業主
+                            </x-dropdown-link>
+                        </div>
+                    </x-slot>
+                </x-dropdown>
+        
+                {{-- business-pull-down --}}
+                <x-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <div class="mt-4">business</div>
+        
+                            <div class="ms-1">
+                                <svg class="fill-current h-4 w-4 mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+        
+                    <x-slot name="content">
+                        <div class="mt-2">
+                            <x-dropdown-link :href="route('admin.business_edit')">
+                                business
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.mobile_edit')">
+                                人材派遣
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.pest_edit')">
+                                害虫駆除
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('admin.ses_edit')">
+                                SES
+                            </x-dropdown-link>
+                        </div>
+                    </x-slot>
+                </x-dropdown>
+        
+                <x-responsive-nav-link :href="route('admin.company_edit')">
+                    company
+                </x-responsive-nav-link>
+            </div>
         </div>
+        
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
