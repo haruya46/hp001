@@ -20,7 +20,7 @@
     <p>応募職種：{{$inputs['genre']}}</p>
     @endif
 
-    @if(isset($inputs['file']))
+    @if(isset($inputs['file']));
     <?php 
         // ファイル名を取得
         $fileName = $inputs['file']; 
