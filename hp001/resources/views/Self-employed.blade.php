@@ -2,7 +2,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
 
@@ -10,7 +10,7 @@
             background-color: #EF9C66; /* 緑 */
         }
         .background--3 {
-            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
         .background--4 {
@@ -18,7 +18,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset("storage/".$recruit_content->background_image)}}');
+            background-image:url('{{asset("storage/images/".$recruit_content->background_image)}}');
             background-size:cover;
         }
       </style>
@@ -46,13 +46,12 @@
                                 <li><a href="{{route("contact")}}" class="sidebar__menu-link">CONTACT</a></li>
                             </ul>
                         </div>
-                        
                     </div>
                     <div class="top-image">
     
-                        <img src="{{asset('storage/'.$recruit_content->application_img)}}" alt="">
+                        <img src="{{asset('storage/images/'.$recruit_content->application_img)}}" alt="">
                         <div class="top-title-area krona-one-regular">
-                            <p>Recruit</p>
+                            <p>Self-employed</p>
                             <span></span>
                             <h3>個人事業主採用</h3>
 
@@ -64,7 +63,7 @@
                     <p>{{$recruit_content->company_goal}}</p>
                 </div>
                 <div class="recruitment-img">
-                    <img src="{{asset('storage/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
+                    <img src="{{asset('storage/images/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
                 </div>
                 <div class="recruitment">
                     <p class="recruitment-title krona-one-regular">募集要項</p>
@@ -76,7 +75,6 @@
                         <p class="content-p">{{$recruit_content->content_p_2}}</p>
                         <p  class="content-title" >{{$recruit_content->content_title_3}}</p>
                         <p class="content-p">{{$recruit_content->content_p_3}}</p>
-                        
                     </div>
                 </div>
                 <div class="location">
@@ -84,16 +82,14 @@
                         <p class="location-title krona-one-regular">{{$recruit_content->location_title}}</p>
                         <span class="location-span"></span>
                         <div class="location-img">
-                            <img src="{{asset('storage/'.$recruit_content->location_img_1)}}" alt="">
-                            <img src="{{asset('storage/'.$recruit_content->location_img_2)}}" alt="">
-                            <img src="{{asset('storage/'.$recruit_content->location_img_3)}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_1)}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_2)}}" alt="">
+                            <img src="{{asset('storage/images/'.$recruit_content->location_img_3)}}" alt="">
                         </div>
                         <div class="location-text-area">
                             <p>{{$recruit_content->location_text_area_1}}</p>
                             <p>{{$recruit_content->location_text_area_2}}</p>
-
                         </div>
-
                     </div>
                 </div>
                 <div class="recruitment-content">
@@ -118,31 +114,28 @@
                     <div class="application-text">
                         <p>ご応募はこちらから</p>
                     </div>
-
                     <div class="application-from">
                         <p class="application-from-text">下記のfoamに必要事項を入力後、「送信」ボタンを押して下さい</p>
-                        <from>
+                        <form method="post" action="{{route('recruit_contact_store')}}" enctype="multipart/form-data">
                         @csrf
                         @method('post')
                         <p>お名前</p>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" name="name">
                         
                         <p>メールアドレス</p>
-                        <input type="mail" class="input-text">
+                        <input type="mail" class="input-text" name="email">
                         <p>電話番号</p>
-                        <input type="tel" class="input-text">
+                        <input type="tel" class="input-text" name="tel">
                         <p>応募職種</p>
-                        <input type="text" class="input-text">
-                        <p>応募内容</p>
-                        <input type="text" class="input-text">
+                        <input type="text" class="input-text" name="genre">
                         <p>ファイル添付（履歴書と職務経歴書）</p>
-                        <input type="file">
+                        <input type="file" name="file">
 
                         <div class="sabmit krona-one-regular">
                             <input type="submit">
                         </div>
 
-                        </from>
+                        </form>
 
                     </div>
                 </div>

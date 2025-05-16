@@ -16,18 +16,18 @@
                     <div class="w-full flex flex-col">
                         <label for="image" class="font-semibold leading-none mt-4">背景画像</label>
                         <input id="image" type="file" name="background_image">
-                        <img src="{{ asset('storage/'.$recruit_content->background_image)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->background_image)}}" class="mx-auto" style="height:300px;">
 
                         <label for="image" class="font-semibold leading-none mt-4">topimage</label>
                         <input id="image" type="file" name="application_img">
-                        <img src="{{ asset('storage/'.$recruit_content->application_img)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->application_img)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">どのような会社を目指しているか</label>
                         <textarea name="company_goal" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('company_goal',$recruit_content->company_goal)}}</textarea>
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="recruitment_img">
-                        <img src="{{ asset('storage/'.$recruit_content->recruitment_img)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->recruitment_img)}}" class="mx-auto" style="height:300px;">
 
                         <p>募集要項</p>
                         <label for="body" class="font-semibold leading-none mt-4">項目1</label>
@@ -83,15 +83,15 @@
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="location_img_1">
-                        <img src="{{ asset('storage/'.$recruit_content->location_img_1)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->location_img_1)}}" class="mx-auto" style="height:300px;">
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="location_img_2">
-                        <img src="{{ asset('storage/'.$recruit_content->location_img_2)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->location_img_2)}}" class="mx-auto" style="height:300px;">
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="location_img_3">
-                        <img src="{{ asset('storage/'.$recruit_content->location_img_3)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$recruit_content->location_img_3)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">住所など</label>
                         <textarea name="location_text_area_1" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('location_text_area_1',$recruit_content->location_text_area_1)}}</textarea>

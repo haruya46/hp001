@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <p>{{ config('app.name', 'Laravel') }}</p>
+                    <p>i-trek管理者画面</p>
                 </div>
 
                 <!-- Navigation Links -->
@@ -14,7 +14,7 @@
                         admin
                     </x-nav-link>
                     <x-nav-link :href="route('register')" >
-                        admin追加
+                        管理者追加
                     </x-nav-link>
                     <x-nav-link :href="route('admin.top_edit')" >
                         top

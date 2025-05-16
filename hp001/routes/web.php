@@ -35,8 +35,11 @@ Route::middleware('auth')->group(function () {
     // 管理者画面
     Route::controller(AdminController::class)->group(function () {
         Route::get('/admin', 'admin')->name('admin.admin');
-        // 作成
-        Route::get('/create', 'create')->name('admin.create');
+        // 新規作成
+        Route::get('create', 'create')->name('admin.create');
+
+
+
         Route::post('/topstore', 'topstore')->name('admin.topstore');
         Route::post('/recruitstore', 'recruitstore')->name('admin.recruitstore');
         Route::post('/businesses_store', 'businesses_store')->name('admin.businesses_store');

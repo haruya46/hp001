@@ -1197,54 +1197,80 @@ class AdminController extends Controller
     public function top_update(Request $request,Toppage $toppage)
     {
 
-        // 入力データのバリデーション
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'business_text' => 'nullable|string',
-            'business_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'recruit_text' => 'nullable|string',
-            'recruit_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'company_hand_text' => 'nullable|string',
-            'company_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'company_text' => 'nullable|string',
-            'backgrand_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-
         // プロパティの更新
-        $toppage->title = $validated['title'];
-        $toppage->business_text = $validated['business_text'] ?? $toppage->business_text;
+        $toppage->title=$request->title;
+        $toppage->business_text =$request->business_text;
 
-        // ファイルアップロードの処理
-        if ($request->hasFile('business_image')) {
-            $businessImageName = $request->file('business_image')->store('images', 'public');
-            $toppage->business_image = $businessImageName;
+        if (request('business_image')) {
+            $file = request()->file('business_image');
+            $originalName = $file->getClientOriginalName();
+            $path = 'storage/images/';
+            $name = $originalName;
+        
+            // 同じ名前のファイルが存在する場合、名前にタイムスタンプを追加
+            if (file_exists($path . $originalName)) {
+                $name = time() . '_' . $originalName;
+            }
+        
+            $file->move($path, $name);
+            $toppage->backgrand_image = $name;
+        }
+        $toppage->recruit_text=$request->recruit_text;
+
+
+        if (request('recruit_image')) {
+            $file = request()->file('recruit_image');
+            $originalName = $file->getClientOriginalName();
+            $path = 'storage/images/';
+            $name = $originalName;
+        
+            // 同じ名前のファイルが存在する場合、名前にタイムスタンプを追加
+            if (file_exists($path . $originalName)) {
+                $name = time() . '_' . $originalName;
+            }
+        
+            $file->move($path, $name);
+            $toppage->recruit_image = $name;
         }
 
-        $toppage->recruit_text = $validated['recruit_text'] ?? $toppage->recruit_text;
+        $toppage->company_hand_text = $request->company_hand_text;
 
-        if ($request->hasFile('recruit_image')) {
-            $recruitImageName = $request->file('recruit_image')->store('images', 'public');
-            $toppage->recruit_image = $recruitImageName;
+        if (request('company_image')) {
+            $file = request()->file('company_image');
+            $originalName = $file->getClientOriginalName();
+            $path = 'storage/images/';
+            $name = $originalName;
+        
+            // 同じ名前のファイルが存在する場合、名前にタイムスタンプを追加
+            if (file_exists($path . $originalName)) {
+                $name = time() . '_' . $originalName;
+            }
+        
+            $file->move($path, $name);
+            $toppage->company_image = $name;
         }
 
-        $toppage->company_hand_text = $validated['company_hand_text'] ?? $toppage->company_hand_text;
+        $toppage->company_text =$request->company_text;
 
-        if ($request->hasFile('company_image')) {
-            $companyImageName = $request->file('company_image')->store('images', 'public');
-            $toppage->company_image = $companyImageName;
-        }
-
-        $toppage->company_text = $validated['company_text'] ?? $toppage->company_text;
-
-        if ($request->hasFile('backgrand_image')) {
-            $backgrandImageName = $request->file('backgrand_image')->store('images', 'public');
-            $toppage->backgrand_image = $backgrandImageName;
+        if (request('backgrand_image')) {
+            $file = request()->file('backgrand_image');
+            $originalName = $file->getClientOriginalName();
+            $path = 'storage/images/';
+            $name = $originalName;
+        
+            // 同じ名前のファイルが存在する場合、名前にタイムスタンプを追加
+            if (file_exists($path . $originalName)) {
+                $name = time() . '_' . $originalName;
+            }
+        
+            $file->move($path, $name);
+            $toppage->backgrand_image = $name;
         }
 
         // 保存処理
         $toppage->save();
 
-        return redirect()->route('admin.admin')->with('success', 'トップページが更新されました！');
+        return redirect()->route('admin.admin');
 
 
     }

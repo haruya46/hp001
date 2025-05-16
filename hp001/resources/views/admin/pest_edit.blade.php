@@ -15,11 +15,11 @@
                     <div class="w-full flex flex-col">
                         <label for="image" class="font-semibold leading-none mt-4">背景画像</label>
                         <input id="image" type="file" name="background_image">
-                        <img src="{{ asset('storage/'.$business_content->background_image)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->background_image)}}" class="mx-auto" style="height:300px;">
 
                         <label for="image" class="font-semibold leading-none mt-4">topimage</label>
                         <input id="image" type="file" name="top_image">
-                        <img src="{{ asset('storage/'.$business_content->top_image)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->top_image)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">事業の説明</label>
                         <textarea name="top_bottom_text" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('top_bottom_text',$business_content->top_bottom_text)}}</textarea>
@@ -29,7 +29,7 @@
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="content_text_image">
-                        <img src="{{ asset('storage/'.$business_content->content_text_image)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->content_text_image)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">事業の魅力</label>
                         <textarea name="business_title" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('business_title',$business_content->business_title)}}</textarea>
@@ -42,7 +42,7 @@
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="business_item_image_1">
-                        <img src="{{ asset('storage/'.$business_content->business_item_image_1)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->business_item_image_1)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">事業の魅力2</label>
                         <textarea name="business_sab_title_2" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('business_sab_title_2',$business_content->business_sab_title_2)}}</textarea>
@@ -52,7 +52,7 @@
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="business_item_image_2">
-                        <img src="{{ asset('storage/'.$business_content->business_item_image_2)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->business_item_image_2)}}" class="mx-auto" style="height:300px;">
 
                         <label for="body" class="font-semibold leading-none mt-4">事業の魅力3</label>
                         <textarea name="business_sab_title_3" class="w-auto py-2 border border-gray-300 rounded-md" id="body" cols="30" rows="10">{{old('business_sab_title_3',$business_content->business_sab_title_3)}}</textarea>
@@ -62,7 +62,7 @@
 
                         <label for="image" class="font-semibold leading-none mt-4">画像</label>
                         <input id="image" type="file" name="business_item_image_3">
-                        <img src="{{ asset('storage/'.$business_content->business_item_image_3)}}" class="mx-auto" style="height:300px;">
+                        <img src="{{ asset('storage/images/'.$business_content->business_item_image_3)}}" class="mx-auto" style="height:300px;">
                     </div>
                     <x-primary-button class="mt-4">
                         送信する

@@ -1,7 +1,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset("storage/".$company->background_image)}}');
+            background-image:url('{{asset("storage/images/".$company->background_image)}}');
             background-size:cover;
         }
 
@@ -10,7 +10,7 @@
         }
 
         .background--3 {
-            background-image:url('{{asset("storage/".$company->background_image)}}');
+            background-image:url('{{asset("storage/images/".$company->background_image)}}');
             background-size:cover;
         }
         .background--4 {
@@ -18,11 +18,11 @@
         }
 
         .background--5 {
-            background-image:url('{{asset("storage/".$company->background_image)}}');
+            background-image:url('{{asset("storage/images/".$company->background_image)}}');
             background-size:cover;
         }
         .background-image-vision{
-            background-image:url('{{asset("storage/image/丸型1.png")}}') ;
+            background-image:url('{{asset("storage/image/circle_orange_right.png")}}') ;
             width: 420px;
             height: 650px;
             background-size:cover;
@@ -56,7 +56,7 @@
                     </div>
                     <div class="top-image krona-one-regular">
     
-                        <img src="{{asset('storage/'.$company->top_image)}}" alt="">
+                        <img src="{{asset('storage/images/'.$company->top_image)}}" alt="">
                         <p>会社について</p>
                         <h3>COMPANY</h3>
                     </div>
@@ -69,7 +69,7 @@
                         <h3 class="krona-one-regular">企業理念</h3>
                     </div>
                     <div class="background-image-vision"></div>
-                    <img src="{{asset('storage/'.$company->background_image_vision)}}" alt="">
+                    <img src="{{asset('storage/images/'.$company->background_image_vision)}}" alt="">
                     <p class="image-in-text new-tegomin-regular">{{$company->image_in_text}}</p>
                 </div>
                 <div class="vision-text">
@@ -91,7 +91,7 @@
                     <p class="ceo-sab-title krona-one-regular">CEO Message</p>
                     <h3 class="krona-one-regular">代表挨拶</h3>
                     <div class="ceo-image">
-                        <img src="{{asset('storage/'.$company->ceo_image)}}" alt="">
+                        <img src="{{asset('storage/images/'.$company->ceo_image)}}" alt="">
                         <p class="text1 new-tegomin-regular">{{$company->text1}}</p>
                         <p class="text2">{{$company->text2}}</p>
                         <p class="text3">{{$company->text3}}</p>

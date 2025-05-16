@@ -4,12 +4,12 @@
 .top{
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     .top-text {
         position: absolute;
         font-size: 52px;
-        top: 400px;
-        right:40px;
+        top: 40%;
+        right:30%;
         transform: rotate(-10deg);
         color: aliceblue;
     }

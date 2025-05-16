@@ -23,11 +23,12 @@
                     display: inline;
                     width:100%;
                     height: 500px;
+                    text-align: center;
                     position: relative;
                     
                     img{
                         width: 100%;
-                        height: 500px;
+                        max-height: 500px;
                         object-fit:cover;
                         object-position: 0px -30px ;
                         box-shadow: 0px -16px 20px rgba(255, 153, 0, 0.2), /* 上方向の影 */
@@ -37,7 +38,7 @@
                     p{
                         position: absolute;
                         bottom:90px;
-                        left: -85px;
+                        left:-20%;
                         font-size: 20px;
                         color: #ffffff;
 
