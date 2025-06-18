@@ -1213,7 +1213,7 @@ class AdminController extends Controller
             }
         
             $file->move($path, $name);
-            $toppage->backgrand_image = $name;
+            $toppage->business_image = $name;
         }
         $toppage->recruit_text=$request->recruit_text;
 
