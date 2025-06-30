@@ -4,6 +4,9 @@
         .background--1 {
             background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
+            background-position: center;  // ← 追加
+            background-repeat: no-repeat;
+            height:1000px;
         }
 
         .background--2 {
@@ -13,6 +16,9 @@
         .background--3 {
             background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
+            background-position: center;  // ← 追加
+            background-repeat: no-repeat;
+            height:1000px;
         }
         .background--4 {
             background-color: #EF9C66; 
@@ -20,6 +26,9 @@
         .background--5 {
             background-image:url('{{asset('storage/images/'.$toppage->backgrand_image)}}') ;
             background-size:cover;
+            background-position: center;  // ← 追加
+            background-repeat: no-repeat;
+            height:1000px;
         }
         .business-backgurand{
             background-image:url('{{asset('storage/image/circle_white_right.png')}}') ;
@@ -46,17 +55,12 @@
     {{-- レスポンシブメニューバー --}}
     <div class="top">
         <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
-        <p class="top-text new-tegomin-regular">{{$toppage->title}}</p>
+        <p class="top-text new-tegomin-regular">{!! nl2br(e($toppage->title)) !!}</p>
         <div class="menu-hamburger">
             <input type="checkbox" id="overlay-input" />
             <label for="overlay-input" id="overlay-button"><span></span></label>
             <div id="overlay">
                 <ul>
-                    <section name="BUSINESS" class="sidebar__menu-link">
-                        <option><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></option>
-                        <option><a href="{{route('mobile')}}">携帯販売</a></option>
-                        <option><a href="{{route('pest')}}">害虫駆除</a></option>
-                    </section>
                     <li><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
                     <li><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>
                     <li><a href="{{route("company")}}" class="sidebar__menu-link">COMPANY</a></li>
@@ -66,7 +70,7 @@
             
         </div>
     </div>
-    <div class="content">
+    <div class="content fade-in-up">
         <div class="center">
             <div class="bg-color">
 
@@ -80,7 +84,7 @@
                     <img src="{{ asset('storage/images/'.$toppage->business_image) }}" alt="" class="business-img">
                     <div class="business-text-area">
         
-                        <p class="business-text">{{$toppage->business_text}}</p>
+                        <p class="business-text">{!! nl2br(e($toppage->business_text)) !!}</p>
                     </div>
                     <div class="business-btn krona-one-regular">
                         <a href="{{route('business')}}">MORE</a>
@@ -96,7 +100,7 @@
                     </div>
                     <img src="{{ asset('storage/images/'.$toppage->recruit_image) }}" alt="" class="recruit-img">
                     <div class="recruit-text-area">
-                        <p class="recruit-text">{{$toppage->recruit_text}}</p>
+                        <p class="recruit-text">{!! nl2br(e($toppage->recruit_text))!!}</p>
                     </div>
                     <div class="recruit-btn krona-one-regular">
                         <a href="{{route('recruit')}}">MORE</a>
@@ -113,7 +117,7 @@
                         <img src="{{ asset('storage/images/'.$toppage->company_image) }}" alt="" class="company-img">
                     </div>
                     <div class="company-text-area">
-                        <p class="company-text">{{$toppage->company_text}}</p>
+                        <p class="company-text">{!! nl2br(e($toppage->company_text))!!}</p>
                     </div>
                     <div class="company-btn krona-one-regular">
                         <a href="{{route('company')}}">MORE</a>

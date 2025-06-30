@@ -4,13 +4,14 @@
 .top{
     position: relative;
     width: 100%;
-    height: 1000px;
+    height:1300px;
+
     .top-text {
         position: absolute;
         font-size: 52px;
-        top: 40%;
-        right:30%;
-        transform: rotate(-10deg);
+        top: 50%;           /* 縦は画面中央に寄せる */
+        left: 65%;          /* 左から65%の位置（センターより右） */
+        transform: translate(-50%, -50%) rotate(-10deg);
         color: aliceblue;
     }
     
@@ -28,6 +29,9 @@
 /* content */
 .content{
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .center{
         position: absolute;
@@ -219,7 +223,10 @@
 	.scroll-container{
         .background--1{
             width: 100%;
-
+            background-size: cover;       // ← 追加
+            background-position: center;  // ← 追加
+            background-repeat: no-repeat; // ← 念のため追加
+            height: 500px;
         }
         .background--2{
             background-color:transparent;
@@ -237,14 +244,15 @@
     }
     .top{
         position: relative;
-        width: 100;
+        width: 100%;
         height: 500px;
         .top-text {
             position: absolute;
-            font-size: 32px;
-            top: 300px;
-            right:40px;
-            color: rgb(255, 255, 255);
+            font-size: 20px;
+            top: 80%;           /* 縦は画面中央に寄せる */
+            left: 65%;          /* 左から65%の位置（センターより右） */
+            transform: translate(-50%, -50%) rotate(-10deg);
+            color: aliceblue;
         }
         .mobile-company-text{
             display: block;

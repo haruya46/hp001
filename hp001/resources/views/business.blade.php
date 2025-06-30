@@ -56,9 +56,9 @@
     
                 </div>
                 <div class="explanation krona-one-regular">
-                    <p class="explanation-title ">事業の説明</p>
+                    <p class="explanation-title ">事業について</p>
                     <span></span>
-                    <p>{{$business->explanation_title}}</p>
+                    <p>{!! nl2br(e($business->explanation_title))!!}</p>
                 </div>
                 <div class="content-menu">
                     <p class="number">1</p>
