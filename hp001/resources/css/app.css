@@ -91,7 +91,7 @@ body, html {
     height: 4px;
     width: 35px;
     border-radius: 2px;
-    background-color: white;
+    background-color: black;
     position: relative;
     display: block;
     transition: all .2s ease-in-out;
@@ -109,13 +109,13 @@ body, html {
     height: 4px;
     width: 35px;
     border-radius: 2px;
-    background-color: white;
+    background-color: black;
     position: absolute;
     content: "";
     transition: all .2s ease-in-out;
     }
     #overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
-    background: #fff;
+    background: black;
     }
     
     input[type=checkbox] {

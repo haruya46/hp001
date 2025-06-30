@@ -52,6 +52,11 @@
             <label for="overlay-input" id="overlay-button"><span></span></label>
             <div id="overlay">
                 <ul>
+                    <section name="BUSINESS" class="sidebar__menu-link">
+                        <option><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></option>
+                        <option><a href="{{route('mobile')}}">携帯販売</a></option>
+                        <option><a href="{{route('pest')}}">害虫駆除</a></option>
+                    </section>
                     <li><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
                     <li><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>
                     <li><a href="{{route("company")}}" class="sidebar__menu-link">COMPANY</a></li>
@@ -106,7 +111,6 @@
                     </div>
                     <div class="company-image-area">
                         <img src="{{ asset('storage/images/'.$toppage->company_image) }}" alt="" class="company-img">
-                        <p class="company-img-text new-tegomin-regular">{{$toppage->company_hand_text}}</p>
                     </div>
                     <div class="company-text-area">
                         <p class="company-text">{{$toppage->company_text}}</p>

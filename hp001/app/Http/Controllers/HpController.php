@@ -52,9 +52,10 @@ class HpController extends Controller
         return view('company', compact('company'));
     }
 
-    public function contact()
+    public function contact(Toppage $toppage)
     {
-        return view('contact');
+        $contact= $toppage->where('id', 1)->first();
+        return view('contact',compact('contact'));
     }
 
     public function fulltime(fulltime $fulltime)

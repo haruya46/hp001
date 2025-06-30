@@ -70,7 +70,6 @@
                     </div>
                     <div class="background-image-vision"></div>
                     <img src="{{asset('storage/images/'.$company->background_image_vision)}}" alt="">
-                    <p class="image-in-text new-tegomin-regular">{{$company->image_in_text}}</p>
                 </div>
                 <div class="vision-text">
                     <p>{{$company->vision_text}}</p>

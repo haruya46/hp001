@@ -68,7 +68,6 @@
                         <img src="{{asset('storage/images/'.$recruit->top_image)}}" alt="">
                         <p class="sab-title krona-one-regular">採用について</p>
                         <h3 class="krona-one-regular">RECRUIT</h3>
-                        <p class="handwriting new-tegomin-regular">{{$recruit->handwriting}}</p>
                     </div>
     
                 </div>
@@ -90,26 +89,6 @@
                 <div class="one-word">
                     <p class="one-word-title krona-one-regular">{{$recruit->one_word_title}}</p>
                     <p class="one-word-text">{{$recruit->one_word_text}}</p>
-                </div>
-                <div class="friend">
-                    <div class="friend-title krona-one-regular">
-                        <p>採用ポリシー</p>
-                        <h3>友達採用</h3>
-
-                    </div>
-                    <div class="friend-text">
-                        <h4 class="krona-one-regular">{{$recruit->krona_one_regular}}</p>
-                        <p>{{$recruit->krona_one_regular_text}}</p>
-                        <img src="{{asset('storage/images/'.$recruit->krona_one_regular_image)}}" alt="">
-                    </div>
-                </div>
-                <div class="company-messeage">
-                    <p class="company-messeage-title krona-one-regular">{{$recruit->company_messeage_title}}</p>
-                    <div class="company-messeage-area">
-                        <p class="company-messeage-item1 krona-one-regular">{{$recruit->company_messeage_item1}}</p>
-                        <p class="company-messeage-item2">{{$recruit->company_messeage_item2}}</p>
-                        <img src="{{asset('storage/images/'.$recruit->company_messeage_area_image)}}" alt="イラストや絵">
-                    </div>
                 </div>
                 
             </div>

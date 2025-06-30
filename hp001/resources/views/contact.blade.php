@@ -3,7 +3,7 @@
 <x-hp-layout>
     <style>
         .background--1 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset('storage/images/'.$contact->backgrand_image)}}') ;
             background-size:cover;
         }
 
@@ -11,7 +11,7 @@
             background-color: #EF9C66; /* 緑 */
         }
         .background--3 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset('storage/images/'.$contact->backgrand_image)}}') ;
             background-size:cover;
         }
         .background--4 {
@@ -19,7 +19,7 @@
         }
 
         .background--5 {
-            background-image:url('{{asset('storage/image/IMG_3651_Original 2 1.png')}}');
+            background-image:url('{{asset('storage/images/'.$contact->backgrand_image)}}') ;
             background-size:cover;
         }
       </style>
