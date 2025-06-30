@@ -70,7 +70,7 @@
             
         </div>
     </div>
-    <div class="content fade-in-up">
+    <div class="content">
         <div class="center">
             <div class="bg-color">
 
