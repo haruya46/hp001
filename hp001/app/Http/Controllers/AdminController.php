@@ -15,6 +15,7 @@ use App\Models\selfemployed;
 use Illuminate\Http\Request;
 
 use function Laravel\Prompts\text;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -1204,16 +1205,18 @@ class AdminController extends Controller
         if (request('business_image')) {
             $file = request()->file('business_image');
             $originalName = $file->getClientOriginalName();
-            $path = 'storage/images/';
-            $name = $originalName;
+            $filename = $originalName;
         
-            // 同じ名前のファイルが存在する場合、名前にタイムスタンプを追加
-            if (file_exists($path . $originalName)) {
-                $name = time() . '_' . $originalName;
+            // ファイル名重複を防ぐ
+            if (Storage::disk('public')->exists('images/' . $originalName)) {
+                $filename = time() . '_' . $originalName;
             }
         
-            $file->move($path, $name);
-            $toppage->business_image = $name;
+            // storage/app/public/images に保存
+            $file->storeAs('images', $filename, 'public');
+        
+            // ファイル名だけ保存
+            $toppage->business_image = $filename;
         }
         $toppage->recruit_text=$request->recruit_text;
 
