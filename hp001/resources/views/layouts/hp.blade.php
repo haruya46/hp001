@@ -23,29 +23,30 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
         <!-- Scripts -->
-        @if (request()->path() === '/') 
+        @if (request()->is('/')) 
             @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('business'))
+        @elseif(request()->is('business'))
             @vite(['resources/css/app.css','resources/sass/business.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('company'))
+        @elseif(request()->is('company'))
             @vite(['resources/css/app.css','resources/sass/company.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('recruit'))
+        @elseif(request()->is('recruit'))
             @vite(['resources/css/app.css','resources/sass/recruit.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('contact'))
+        @elseif(request()->is('contact'))
             @vite(['resources/css/app.css','resources/sass/contact.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('fulltime'))
+        @elseif(request()->is('fulltime'))
             @vite(['resources/css/app.css','resources/sass/fulltime.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('mobile'))
+        @elseif(request()->is('mobile'))
             @vite(['resources/css/app.css','resources/sass/mobile.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('parttime'))
+        @elseif(request()->is('parttime'))
             @vite(['resources/css/app.css','resources/sass/parttime.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('pest'))
+        @elseif(request()->is('pest'))
             @vite(['resources/css/app.css','resources/sass/pest.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('ses'))
+        @elseif(request()->is('ses'))
             @vite(['resources/css/app.css','resources/sass/ses.scss', 'resources/js/app.js'])
-        @elseif(request()->path()===('selfemployed'))
+        @elseif(request()->is('selfemployed'))
             @vite(['resources/css/app.css','resources/sass/selfemployed.scss', 'resources/js/app.js'])
         @endif
+    
     </head>
     <body>
         {{-- サイドバー --}}
