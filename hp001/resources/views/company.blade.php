@@ -72,16 +72,16 @@
                     <img src="{{asset('storage/images/'.$company->background_image_vision)}}" alt="">
                 </div>
                 <div class="vision-text">
-                    <p>{{$company->vision_text}}</p>
+                    <p>{!! nl2br(e($company->vision_text)) !!}</p>
                 </div>
 
                 <div class="vision-1">
-                    <h3 class="krona-one-regular">{{$company->krona_one_regular_1}}</h3>
-                    <p>{{$company->krona_one_regular_text_1}}</p>
+                    <h3 class="krona-one-regular">{!! nl2br(e($company->krona_one_regular_1)) !!}</h3>
+                    <p>{!! nl2br(e($company->krona_one_regular_text_1)) !!}</p>
                 </div>
                 <div class="vision-2">
-                    <h3 class="krona-one-regular">{{$company->krona_one_regular_2}}</h3>
-                    <p>{{$company->krona_one_regular_text_2}}</p>
+                    <h3 class="krona-one-regular">{!! nl2br(e($company->krona_one_regular_2)) !!}</h3>
+                    <p>{!! nl2br(e($company->krona_one_regular_text_2)) !!}</p>
                 </div>
 
 
@@ -91,11 +91,11 @@
                     <h3 class="krona-one-regular">代表挨拶</h3>
                     <div class="ceo-image">
                         <img src="{{asset('storage/images/'.$company->ceo_image)}}" alt="">
-                        <p class="text1 new-tegomin-regular">{{$company->text1}}</p>
-                        <p class="text2">{{$company->text2}}</p>
-                        <p class="text3">{{$company->text3}}</p>
+                        <p class="text1 new-tegomin-regular">{!! nl2br(e($company->text1)) !!}</p>
+                        <p class="text2">{!! nl2br(e($company->text2)) !!}</p>
+                        <p class="text3">{!! nl2br(e($company->text3)) !!}</p>
                     </div>
-                    <p class="ceo-text">{{$company->ceo_text}}</p>
+                    <p class="ceo-text">{!! nl2br(e($company->ceo_text)) !!}</p>
                 </div>
 
                 <div class="company-memo">
@@ -103,19 +103,19 @@
                     <h3 class="krona-one-regular">会社概要</h3>
                     <div class="company-memo-area">
 
-                        <p class="company-category">{{$company->company_category_1}}</p>
-                        <p class="company-category-text">{{$company->company_category_text_1}}</p>
+                        <p class="company-category">{!! nl2br(e($company->company_category_1)) !!}</p>
+                        <p class="company-category-text">{!! nl2br(e($company->company_category_text_1)) !!}</p>
                         <span></span>
-                        <p class="company-category">{{$company->company_category_2}}</p>
-                        <p class="company-category-text">{{$company->company_category_text_2}}</p>
-                        <span></span><p class="company-category">{{$company->company_category_3}}</p>
-                        <p class="company-category-text">{{$company->company_category_text_3}}</p>
+                        <p class="company-category">{!! nl2br(e($company->company_category_2)) !!}</p>
+                        <p class="company-category-text">{!! nl2br(e($company->company_category_text_2)) !!}</p>
+                        <span></span><p class="company-category">{!! nl2br(e($company->company_category_3)) !!}</p>
+                        <p class="company-category-text">{!! nl2br(e($company->company_category_text_3)) !!}</p>
                         <span></span>
-                        <p class="company-category">{{$company->company_category_4}}</p>
-                        <p class="company-category-text">{{$company->company_category_text_4}}</p>
+                        <p class="company-category">{!! nl2br(e($company->company_category_4)) !!}</p>
+                        <p class="company-category-text">{!! nl2br(e($company->company_category_text_4)) !!}</p>
                         <span></span>
-                        <p class="company-category">{{$company->company_category_5}}</p>
-                        <p class="company-category-text">{{$company->company_category_text_5}}</p>
+                        <p class="company-category">{!! nl2br(e($company->company_category_5)) !!}</p>
+                        <p class="company-category-text">{!! nl2br(e($company->company_category_text_5)) !!}</p>
                         <span></span>
                         <img src="{{asset('storage/images/'.$company->company_category_image)}}" alt="">
                     </div>
