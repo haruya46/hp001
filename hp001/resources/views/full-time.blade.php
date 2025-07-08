@@ -133,8 +133,6 @@
                         <input type="tel" class="input-text" name="tel">
                         <p>応募職種</p>
                         <input type="text" class="input-text" name="genre">
-                        <p>ファイル添付（履歴書と職務経歴書）</p>
-                        <input type="file" name="file">
 
                         <div class="sabmit krona-one-regular">
                             <input type="submit">

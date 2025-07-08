@@ -14,20 +14,17 @@ class ContactForm extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $inputs;
-    private $filePath;
+    public $data;
 
-    public function __construct($inputs, $filePath = null)
+    public function __construct($inputs)
     {
-        $this->inputs = $inputs;
-        $this->filePath = $filePath;
+        $this->data = $inputs;
     }
 
     public function envelope()
     {
         return new Envelope(
-            subject: 'お問い合わせを受け付けました',
-            to: 'test@test'
+            subject: '[お問い合わせ] ' . $this->data['name'] . '様より',
         );
     }
 
@@ -35,24 +32,7 @@ class ContactForm extends Mailable
     {
         return new Content(
             view: 'contact_form',
+            with: ['data' => $this->data],
         );
-    }
-
-    public function build()
-    {
-        // メールの基本設定
-        $email = $this->view('contact_form')
-                      ->subject('お問い合わせを受け付けました');
-                   
-
-        // 添付ファイルが指定されていれば添付する
-        if ($this->filePath) {
-            $email->attach(storage_path("app/public/{$this->filePath}"), [
-                'as' => 'document.pdf',  // 添付ファイル名
-                'mime' => 'application/pdf',  // MIMEタイプ
-            ]);
-        }
-
-        return $email;
     }
 }

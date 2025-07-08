@@ -10,7 +10,7 @@ Route::controller(HpController::class)->group(function () {
     Route::get('/recruit', 'recruit')->name('recruit');
     Route::get('/company', 'company')->name('company');
     Route::get('/contact', 'contact')->name('contact');
-    Route::post('/store_contact', 'store_contact')->name('store_contact');
+    Route::post('/contact_store', 'contact_store')->name('contact_store');
     Route::get('/fulltime', 'fulltime')->name('full-time');
     Route::get('/mobile', 'mobile')->name('mobile');
     Route::get('/parttime', 'parttime')->name('part-time');
@@ -18,9 +18,6 @@ Route::controller(HpController::class)->group(function () {
     Route::get('/selfemployed', 'selfemployed')->name('Self-employed');
     Route::get('/ses', 'ses')->name('ses');
 
-    // お問い合わせ
-    Route::post('contact/store','contact_store')->name('contact_store');
-    Route::post('contact/recruit_store','recruit_contact_store')->name('recruit_contact_store');
 });
 
 
@@ -74,7 +71,6 @@ Route::middleware('auth')->group(function () {
         Route::patch('/mobile_update/{business_content}', 'mobile_update')->name('admin.mobile_update');
         Route::patch('/ses_update/{business_content}', 'ses_update')->name('admin.ses_update');
         Route::patch('/pest_update/{business_content}', 'pest_update')->name('admin.pest_update');
-        // お問い合わせ
         
     });
 });

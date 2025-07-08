@@ -9,24 +9,10 @@
 <body>
     <p>お問い合わせ内容は次のとおりです。</p>
     ーーーー
-    <p>名前：{{$inputs['name']}}</p>
-    <p>メールアドレス：{{$inputs['email']}}</p>
-    <p>電話番号：{{$inputs['tel']}}</p>
-    @if(isset($inputs['content']))
-    <p>お問い合わせ内容：{{$inputs['content']}}</p>
-    @endif
-
-    @if(isset($inputs['genre']))
-    <p>応募職種：{{$inputs['genre']}}</p>
-    @endif
-
-    @if(isset($inputs['file']))
-    <?php 
-        // ファイル名を取得
-        $fileName = $inputs['file']; 
-    ?>
-    <p>添付ファイル：<a href="{{ asset('storage/' . $fileName ) }}" target="_blank">ダウンロード</a></p>
-    @endif
+    <p>お名前：{{ $data['name'] }}</p>
+    <p>メール：{{ $data['email'] }}</p>
+    <p>電話番号：{{ $data['tel'] }}</p>
+    <p>お問い合わせ内容：<br>{!! nl2br(e($data['content'])) !!}</p>
 
 
 
