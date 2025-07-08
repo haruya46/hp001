@@ -293,13 +293,12 @@
                     height: 500px;
 
                     .mobile-company-text{
+                        position: fixed; // ← relativeではなくfixedに変更
+                        top: -70px;
+                        left: -20px;
+                        width: 200px;
+                        z-index: 100; // 数値にする
                         display: block;
-                        position:fixed;
-                        top: 10px;
-                        left: 10px;
-                        font-size: 32px;
-                        color: #FFFFFF;
-                        z-index: 50;
                         
                     }
                     .menu-hamburger{
