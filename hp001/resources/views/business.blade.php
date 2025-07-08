@@ -67,7 +67,7 @@
                     <div class="content-img">
                         <img src="{{asset('storage/images/'.$business->content_img_1)}}" alt="">
                         <div class="more">
-                            <p>{{$business->more_text_1}}</p>
+                            <p>{!! nl2br(e($business->more_text_1)) !!}</p>
                             
                             <p class="link krona-one-regular"><a href="{{route('mobile')}}">more</a></p>
                         </div>
@@ -80,7 +80,7 @@
                     <div class="content-img">
                         <img src="{{asset('storage/images/'.$business->content_img_2)}}" alt="">
                         <div class="more">
-                            <p>{{$business->more_text_2}}</p>
+                            <p>{!! nl2br(e($business->more_text_2)) !!}</p>
                             <p class="link krona-one-regular"><a href="{{route('pest')}}">more</a></p>
     
                         </div>
@@ -93,7 +93,7 @@
                     <div class="content-img">
                         <img src="{{asset('storage/images/'.$business->content_img_3)}}" alt="">
                         <div class="more">
-                            <p>{{$business->more_text_3}}</p>
+                            <p>{!! nl2br(e($business->more_text_3)) !!}</p>
                             <p class="link krona-one-regular"><a href="{{route('ses')}}">more</a></p>
     
                         </div>

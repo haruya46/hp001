@@ -87,8 +87,8 @@
                     <p class="btn krona-one-regular"><a href="{{route('Self-employed')}}">求人情報を見る</a></p>
                 </div>
                 <div class="one-word">
-                    <p class="one-word-title krona-one-regular">{{$recruit->one_word_title}}</p>
-                    <p class="one-word-text">{{$recruit->one_word_text}}</p>
+                    <p class="one-word-title krona-one-regular">{!! nl2br(e($recruit->one_word_title)) !!}</p>
+                    <p class="one-word-text">{!! nl2br(e($recruit->one_word_text)) !!}</p>
                 </div>
                 
             </div>

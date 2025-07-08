@@ -60,7 +60,7 @@
     
                 </div>
                 <div class="company-goal">
-                    <p>{{$recruit_content->company_goal}}</p>
+                    <p>{!! nl2br(e($recruit_content->company_goal)) !!}</p>
                 </div>
                 <div class="recruitment-img">
                     <img src="{{asset('storage/images/'.$recruit_content->recruitment_img)}}" alt="{{$recruit_content->recruitment_img}}">
@@ -69,17 +69,18 @@
                     <p class="recruitment-title krona-one-regular">募集要項</p>
                     <span class="recruitment-span"></span>
                     <div class="recruitment-content">
-                        <p class="content-title">{{$recruit_content->content_title_1}}</p>
-                        <p class="content-p">{{$recruit_content->content_p_1}}</p>
-                        <p  class="content-title" >{{$recruit_content->content_title_2}}</p>
-                        <p class="content-p">{{$recruit_content->content_p_2}}</p>
-                        <p  class="content-title" >{{$recruit_content->content_title_3}}</p>
-                        <p class="content-p">{{$recruit_content->content_p_3}}</p>
+                        <p class="content-title">{!! nl2br(e($recruit_content->content_title_1)) !!}</p>
+                        <p class="content-p">{!! nl2br(e($recruit_content->content_p_1)) !!}</p>
+                        <p  class="content-title" >{!! nl2br(e($recruit_content->content_title_2)) !!}</p>
+                        <p class="content-p">{!! nl2br(e($recruit_content->content_p_2)) !!}</p>
+                        <p  class="content-title" >{!! nl2br(e($recruit_content->content_title_3)) !!}</p>
+                        <p class="content-p">{!! nl2br(e($recruit_content->content_p_3)) !!}</p>
+                        
                     </div>
                 </div>
                 <div class="location">
                     <div class="location-background">
-                        <p class="location-title krona-one-regular">{{$recruit_content->location_title}}</p>
+                        <p class="location-title krona-one-regular">{!! nl2br(e($recruit_content->location_title)) !!}</p>
                         <span class="location-span"></span>
                         <div class="location-img">
                             <img src="{{asset('storage/images/'.$recruit_content->location_img_1)}}" alt="">
@@ -87,22 +88,24 @@
                             <img src="{{asset('storage/images/'.$recruit_content->location_img_3)}}" alt="">
                         </div>
                         <div class="location-text-area">
-                            <p>{{$recruit_content->location_text_area_1}}</p>
-                            <p>{{$recruit_content->location_text_area_2}}</p>
+                            <p>{!! nl2br(e($recruit_content->location_text_area_1)) !!}</p>
+                            <p>{!! nl2br(e($recruit_content->location_text_area_2)) !!}</p>
+
                         </div>
+
                     </div>
                 </div>
                 <div class="recruitment-content">
-                    <p  class="content-title">{{$recruit_content->content_title_4}}</p>
-                    <p>{{$recruit_content->content_p_4}}</p>
-                    <p  class="content-title">{{$recruit_content->content_title_5}}</p>
-                    <p >{{$recruit_content->content_p_5}}</p>
-                    <p  class="content-title">{{$recruit_content->content_title_6}}</p>
-                    <p>{{$recruit_content->content_p_6}}</p>
-                    <p class="content-title">{{$recruit_content->content_title_7}}</p>
-                    <p>{{$recruit_content->content_p_7}}</p>
-                    <p class="content-title">{{$recruit_content->content_title_8}}</p>
-                    <p>{{$recruit_content->content_p_8}}</p>
+                    <p  class="content-title">{!! nl2br(e($recruit_content->content_title_4)) !!}</p>
+                    <p>{!! nl2br(e($recruit_content->content_p_4)) !!}</p>
+                    <p  class="content-title">{!! nl2br(e($recruit_content->content_title_5)) !!}</p>
+                    <p >{!! nl2br(e($recruit_content->content_p_5)) !!}</p>
+                    <p  class="content-title">{!! nl2br(e($recruit_content->content_title_6)) !!}</p>
+                    <p>{!! nl2br(e($recruit_content->content_p_6)) !!}</p>
+                    <p class="content-title">{!! nl2br(e($recruit_content->content_title_7)) !!}</p>
+                    <p>{!! nl2br(e($recruit_content->content_p_7)) !!}</p>
+                    <p class="content-title">{!! nl2br(e($recruit_content->content_title_8)) !!}</p>
+                    <p>{!! nl2br(e($recruit_content->content_p_8)) !!}</p>
                     
                 </div>
                 <div class="application">

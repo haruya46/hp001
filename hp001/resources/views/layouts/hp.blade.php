@@ -51,7 +51,8 @@
     <body>
         {{-- サイドバー --}}
         <div class="sidebar krona-one-regular">
-            <h1 class="sidebar__title"><a href="{{route("toppage")}}">I-Trek</a></h1>
+            {{-- <h1 class="sidebar__title"><a href="{{route("toppage")}}">I-Trek</a></h1> --}}
+            <img src="{{asset('storage/image/logo.png')}}" alt="" class="sidebar__title">
             <ul class="sidebar__menu">
                 <li class="sidebar__menu-item"><a href="{{route("business")}}" class="sidebar__menu-link">BUSINESS</a></li>
                 <li class="sidebar__menu-item"><a href="{{route("recruit")}}" class="sidebar__menu-link">RECRUIT</a></li>

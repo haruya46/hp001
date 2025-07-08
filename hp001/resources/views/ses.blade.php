@@ -60,38 +60,38 @@
 
                         </div>
                     </div>
-                    <p class="top-bottom-text">{{$business_content->top_bottom_text}}</p>
+                    <p class="top-bottom-text">{!! nl2br(e($business_content->top_bottom_text)) !!}</p>
     
                 </div>
                 <div class="content-item1">
-                    <p class="content-text">{{$business_content->content_text}}</p>
+                    <p class="content-text">{!! nl2br(e($business_content->content_text)) !!}</p>
                     <img src="{{asset('storage/images/'.$business_content->content_text_image)}}" alt="イラストや写真">
                 </div>
                 <div class="business">
-                    <p class="business-title">{{$business_content->business_title}}</p>
+                    <p class="business-title">{!! nl2br(e($business_content->business_title)) !!}</p>
                     <span class="business-span"></span>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>1</p>
                         </div>
-                        <p class="business-sab-title">{{$business_content->business_sab_title_1}}</p>
-                        <p class="business-item-text">{{$business_content->business_item_text_1}}</p>
+                        <p class="business-sab-title">{!! nl2br(e($business_content->business_sab_title_1)) !!}</p>
+                        <p class="business-item-text">{!! nl2br(e($business_content->business_item_text_1)) !!}</p>
                         <img src="{{asset('storage/images/'.$business_content->business_item_image_1)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>2</p>
                         </div>
-                        <p class="business-sab-title">{{$business_content->business_sab_title_2}}</p>
-                        <p class="business-item-text">{{$business_content->business_item_text_2}}</p>
+                        <p class="business-sab-title">{!! nl2br(e($business_content->business_sab_title_2)) !!}</p>
+                        <p class="business-item-text">{!! nl2br(e($business_content->business_item_text_2)) !!}</p>
                     <img src="{{asset('storage/images/'.$business_content->business_item_image_2)}}" alt="">
                     </div>
                     <div class="business-item1">
                         <div class="business-number">
                             <p>3</p>
                         </div>
-                        <p class="business-sab-title">{{$business_content->business_sab_title_3}}</p>
-                        <p class="business-item-text">{{$business_content->business_item_text_3}}</p>
+                        <p class="business-sab-title">{!! nl2br(e($business_content->business_sab_title_3)) !!}</p>
+                        <p class="business-item-text">{!! nl2br(e($business_content->business_item_text_3)) !!}</p>
                         <img src="{{asset('storage/images/'.$business_content->business_item_image_3)}}" alt="">
                     </div>
                 </div>
