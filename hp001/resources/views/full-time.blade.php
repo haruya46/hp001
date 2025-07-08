@@ -132,9 +132,9 @@
                         <p>希望雇用形態※求職者のみ回答</p>
                         <select name="employment" class="input-text">
                             <option value="選択なし">選択なし</option>
-                            <option value="営業">正社員</option>
-                            <option value="事務">アルバイト</option>
-                            <option value="エンジニア">個人事業主</option>
+                            <option value="正社員">正社員</option>
+                            <option value="アルバイト">アルバイト</option>
+                            <option value="個人事業主">個人事業主</option>
                         </select>
                         <p>応募職種※求職者のみ回答</p>
                         <select name="genre" class="input-text">
