@@ -106,7 +106,7 @@ class HpController extends Controller
 
     $adminEmail = config('mail.admin');
 
-    // Mail::to($adminEmail)->send(new ContactForm($inputs));
+    Mail::to($adminEmail)->send(new ContactForm($inputs));
 
     return back()->with('message', 'お問い合わせを送信しました');
 }
