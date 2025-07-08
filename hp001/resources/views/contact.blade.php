@@ -86,13 +86,17 @@
                         </select>
                         <p>お問い合わせ内容</p>
                         <textarea  class="input-text-textarea" cols="30" rows="30" name="content"></textarea>
+                        @if(session('message'))
+                            <div class="alert alert-success">
+                                {{ session('message') }}
+                            </div>
+                        @endif
 
                         <div class="sabmit">
                             <input type="submit">
                         </div>
 
                         </form>
-
                     </div>
                 </div>
 

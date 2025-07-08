@@ -143,7 +143,11 @@
                             <option value="エンジニア">エンジニア</option>
                             <option value="害虫駆除">害虫駆除</option>
                         </select>
-
+                        @if(session('message'))
+                            <div class="alert alert-success">
+                                {{ session('message') }}
+                            </div>
+                        @endif
                         <div class="sabmit">
                             <input type="submit">
                         </div>
