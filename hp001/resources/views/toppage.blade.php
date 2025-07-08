@@ -54,7 +54,7 @@
 
     {{-- レスポンシブメニューバー --}}
     <div class="top">
-        <p class="mobile-company-text"><a href="{{route("toppage")}}">I-Trek</a></p>
+        <a href="{{route("toppage")}}"><img src="{{asset('storage/image/logo.png')}}" class="mobile-company-text"></a>
         <p class="top-text new-tegomin-regular">{!! nl2br(e($toppage->title)) !!}</p>
         <div class="menu-hamburger">
             <input type="checkbox" id="overlay-input" />
