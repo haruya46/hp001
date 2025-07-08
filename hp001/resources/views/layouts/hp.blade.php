@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <meta name="description" content="@yield('meta_description', '')" />
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -16,7 +16,46 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=New+Tegomin&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-       
+       {{-- SEO対策用 --}}
+       <meta name="description" content="@yield('description', 'i‑Trekは…（ここに概要文章）')">
+    <link rel="canonical" href="{{ url()->current() }}"/>
+
+    <!-- OGP設定 -->
+    <meta property="og:site_name" content="i‑Trek 株式会社">
+    <meta property="og:title" content="@yield('title', 'i‑Trek 株式会社 | 働く人から、輝く人へ。')">
+    <meta property="og:description" content="@yield('description', 'i‑Trekは「好きなことを原動力に、1人1人が自分らしい一歩を踏み出す。
+    仲間と共に挑戦し続けることで、まだ誰も見たことのない景色を一緒に目指していく。そんな思いが集まる場所です。')">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    <!-- Twitterカード -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')">
+
+    <!-- JSON-LD構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "i‑Trek 株式会社",
+      "url": "{{ url('/') }}",
+      "logo": "{{ asset('images/logo.png') }}",
+      "description": "@yield('description', 'i‑Trekは')",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "06-7639-6400",
+        "contactType": "customer support",
+        "areaServed": "JP",
+        "availableLanguage": "Japanese"
+      },
+      "sameAs": [
+        "https://www.facebook.com/…",
+        "https://www.instagram.com/…"
+      ]
+    }
+    </script>
+
         
         
         {{-- jquery --}}
