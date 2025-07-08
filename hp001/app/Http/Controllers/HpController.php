@@ -100,16 +100,16 @@ class HpController extends Controller
         return view('ses', compact('business_content'));
     }
 
-    public function contact_store(Recruit $request)
-{
-    $inputs = $request->only(['name', 'email', 'tel', 'content']);
-
-    $adminEmail = config('mail.admin');
-
-    Mail::to($adminEmail)->send(new ContactForm($inputs));
-
-    return back()->with('message', 'お問い合わせを送信しました');
-}
+    public function contact_store(Request $request)
+    {
+        $inputs = $request->only(['name', 'email', 'tel','employment','genre', 'content']);
+    
+        $adminEmail = config('mail.admin');
+    
+        Mail::to($adminEmail)->send(new ContactForm($inputs));
+    
+        return back()->with('message', 'お問い合わせを送信しました');
+    }
 
 
 

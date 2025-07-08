@@ -67,9 +67,23 @@
                         <p>お名前</p>
                         <input type="text" class="input-text" name="name">
                         <p>メールアドレス</p>
-                        <input type="mail" class="input-text" name="email">
+                        <input type="email" class="input-text" name="email">
                         <p>電話番号</p>
                         <input type="tel" class="input-text" name="tel">
+                        <p>希望雇用形態※求職者のみ回答</p>
+                        <select name="employment" class="input-text">
+                            <option value="選択なし">選択なし</option>
+                            <option value="営業">正社員</option>
+                            <option value="事務">アルバイト</option>
+                            <option value="エンジニア">個人事業主</option>
+                        </select>
+                        <p>応募職種※求職者のみ回答</p>
+                        <select name="genre" class="input-text">
+                            <option value="選択なし">選択なし</option>
+                            <option value="営業">営業</option>
+                            <option value="エンジニア">エンジニア</option>
+                            <option value="害虫駆除">害虫駆除</option>
+                        </select>
                         <p>お問い合わせ内容</p>
                         <textarea  class="input-text-textarea" cols="30" rows="30" name="content"></textarea>
 

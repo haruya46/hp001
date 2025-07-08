@@ -118,21 +118,31 @@
                         <p>ご応募はこちらから</p>
                     </div>
                     <div class="application-from">
-                        <p class="application-from-text">下記のfoamに必要事項を入力後、「送信」ボタンを押して下さい</p>
-                        <form method="post" action="{{route('recruit_contact_store')}}" enctype="multipart/form-data">
+                        <p class="application-from-text">下記のフォームに必要事項を入力後、「送信」ボタンを押して下さい</p>
+                        <form method="post" action="{{route('contact_store')}}" enctype="multipart/form-data">
                         @csrf
-                        @method('post')
                         <p>お名前</p>
                         <input type="text" class="input-text" name="name">
-                        
                         <p>メールアドレス</p>
-                        <input type="mail" class="input-text" name="email">
+                        <input type="email" class="input-text" name="email">
                         <p>電話番号</p>
                         <input type="tel" class="input-text" name="tel">
-                        <p>応募職種</p>
-                        <input type="text" class="input-text" name="genre">
+                        <p>希望雇用形態※求職者のみ回答</p>
+                        <select name="employment" class="input-text">
+                            <option value="選択なし">選択なし</option>
+                            <option value="営業">正社員</option>
+                            <option value="事務">アルバイト</option>
+                            <option value="エンジニア">個人事業主</option>
+                        </select>
+                        <p>応募職種※求職者のみ回答</p>
+                        <select name="genre" class="input-text">
+                            <option value="選択なし">選択なし</option>
+                            <option value="営業">営業</option>
+                            <option value="エンジニア">エンジニア</option>
+                            <option value="害虫駆除">害虫駆除</option>
+                        </select>
 
-                        <div class="sabmit krona-one-regular">
+                        <div class="sabmit">
                             <input type="submit">
                         </div>
 
