@@ -61,7 +61,10 @@
                     <p>{!! nl2br(e($business->explanation_title))!!}</p>
                 </div>
                 <div class="content-menu">
-                    <p class="number">1</p>
+                    <div class="number">
+                        <p>1</p>
+
+                    </div>
                     <p class="sab-title krona-one-regular">Staffing</p>
                     <p class="title krona-one-regular">人材派遣</p>
                     <div class="content-img">
@@ -74,7 +77,10 @@
                     </div>
                 </div>
                 <div class="content-menu">
-                    <p class="number">2</p>
+                    <div class="number">
+                        <p>2</p>
+
+                    </div>
                     <p class="sab-title krona-one-regular">pest</p>
                     <p class="title krona-one-regular">害虫駆除</p>
                     <div class="content-img">
@@ -87,7 +93,10 @@
                     </div>
                 </div>
                 <div class="content-menu">
-                    <p class="number">3</p>
+                    <div class="number">
+                        <p>3</p>
+
+                    </div>
                     <p class="sab-title krona-one-regular">System Engineering Service</p>
                     <p class="title krona-one-regular">SES</p>
                     <div class="content-img">

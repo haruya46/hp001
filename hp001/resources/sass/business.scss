@@ -16,49 +16,45 @@
             border-radius:0 0 20px 20px ;
 
             // top
-            .top{
-
-                .top-image{
-
-                    display: inline;
-                    width:100%;
+            .top {
+                .top-image {
+                    display: inline-block;
+                    width: 100%;
                     height: 500px;
                     text-align: center;
                     position: relative;
-                    
-                    img{
+            
+                    img {
                         width: 100%;
                         max-height: 500px;
-                        object-fit:cover;
-                        object-position: 0px -30px ;
-                        box-shadow: 0px -16px 20px rgba(255, 153, 0, 0.2), /* 上方向の影 */
-                        0px 16px 20px rgba(255, 153, 0, 0.2);  /* 下方向の影 */
+                        object-fit: cover;
+                        object-position: 0px -30px;
                     }
-        
-                    p{
+            
+                    p, h3 {
                         position: absolute;
-                        bottom:90px;
-                        left:-20%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #ffffff;
+                        text-align: center;
+                    }
+            
+                    p {
                         font-size: 20px;
-                        color: #ffffff;
-
-                        
+                        margin-top: -40px; // h3との位置を調整（任意）
                     }
-                    h3{
-                        position: absolute;
-                        bottom:50px;
-                        left: -80px;
+            
+                    h3 {
                         font-size: 34px;
-                        color: #ffffff;
-
+                        margin-top: 20px; // pとのバランスを取る
                     }
                 }
-                
-                
             }
+            
 
             .explanation{
-                margin-top: 200px;
+                margin-top: 100px;
                 .explanation-title{
                     font-size: 32px;
                     font-weight: bold;
@@ -73,17 +69,29 @@
                 padding-bottom:100px ;
                 
                 .number{
-                    position: absolute;
+                    // position: absolute;
+                    // width: 100px;
+                    // height: 100px;
+                    // top: -50px;
+                    // left: 200px;
+                    // color:#ffffff;
+                    // background-color: #EF9C66;
+                    // border: 1px solid #EF9C66;
+                    // border-radius: 300px;
+                    // font-size: 80px;
+                    // padding-top:-10px ;
+                    background-color: #EF9C66;
                     width: 100px;
                     height: 100px;
-                    top: -50px;
-                    left: 200px;
-                    color:#ffffff;
-                    background-color: #EF9C66;
-                    border: 1px solid #EF9C66;
-                    border-radius: 300px;
-                    font-size: 80px;
-                    padding-top:-10px ;
+                    border-radius: 100px;
+                    margin: 0 auto 30px auto;
+                    margin-top: -50px;
+                    p{
+                        font-size: 65px;
+                        color: #FFFFFF;
+                    }
+                 
+
                     
         
                 }
@@ -96,32 +104,42 @@
                     margin-bottom: 20px;
         
                 }
-                .content-img{
+                .content-img {
                     width: 80%;
                     margin: 0 auto;
-                    position: relative;
-        
-                    .more{
+                    position: relative; // ←これが必要！重ねるため
+                    z-index: 20;
+                
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                
+                    .more {
                         position: absolute;
-                        bottom: -90px;
-                        left: 80px;
+                        bottom:-50px; // 画像のどの位置に重ねたいか調整（例：下部）
+                        left: 50%;
+                        transform: translateX(-50%); // 中央に配置
                         padding: 20px 30px;
-                        background-color: #ffffff;
+                        background-color: #ffffff; // ← 白背景
                         width: 250px;
-                        
-                        p{
-                            font-size:15px ;
+                        z-index: 100;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.1); // ←見やすくするための影（任意）
+                
+                        p {
+                            font-size: 15px;
                         }
-                        .link{
+                
+                        .link {
                             margin-top: 20px;
                             border: 1px solid #EF9C66;
                             border-radius: 30px;
                             padding: 0 50px;
                             color: #EF9C66;
                         }
-            
                     }
                 }
+                
             }
         }
         .footer-content{
@@ -191,36 +209,38 @@
                         display: block;
                         z-index: 50px;
                     }
-                    .top-image{
-                        display: inline;
-                        width:100%;
-                        height: 700px;
+                    .top-image {
+                        display: inline-block;
+                        width: 100%;
+                        height: 500px;
+                        text-align: center;
                         position: relative;
-                        
-                        img{
+                
+                        img {
                             width: 100%;
-                            height: 700px;
-                            object-fit:cover;
-                            object-position: -50px -30px ;
-                            box-shadow:none;
+                            height: 100%;
+                            max-height: 700px;
+                            object-fit: cover;
+                            object-position: 0px -30px;
                         }
-            
-                        p{
+                
+                        p, h3 {
                             position: absolute;
-                            top:350px;
-                            left: -85px;
-                            font-size: 20px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                             color: #ffffff;
-    
-                            
+                            text-align: center;
                         }
-                        h3{
-                            position: absolute;
-                            top:370px;
-                            left: -80px;
+                
+                        p {
+                            font-size: 15px;
+                            margin-top: -40px; // h3との位置を調整（任意）
+                        }
+                
+                        h3 {
                             font-size: 34px;
-                            color: #ffffff;
-    
+                            margin-top: 20px; // pとのバランスを取る
                         }
                     }
                 }
@@ -228,25 +248,35 @@
                     margin: 100px 10% 0 10%;
                     border: 1px solid black;
                     position: relative;
-                    padding-bottom:200px ;
+                    padding-bottom:100px ;
                     
-                .number{
-                    position: absolute;
-                    width: 100px;
-                    height: 100px;
-                    top: -50px;
-                    left: 100px;
-                    color:#ffffff;
-                    background-color: #EF9C66;
-                    border: 1px solid #EF9C66;
-                    border-radius: 300px;
-                    font-size: 80px;
-                    padding-top:-10px ;
+                    .number{
+                        // position: absolute;
+                        // width: 100px;
+                        // height: 100px;
+                        // top: -50px;
+                        // left: 200px;
+                        // color:#ffffff;
+                        // background-color: #EF9C66;
+                        // border: 1px solid #EF9C66;
+                        // border-radius: 300px;
+                        // font-size: 80px;
+                        // padding-top:-10px ;
+                        background-color: #EF9C66;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 100px;
+                        margin: 0 auto 30px auto;
+                        margin-top: -50px;
+                        p{
+                            font-size: 65px;
+                            color: #FFFFFF;
+                        }
                     
         
                 }
                 .sab-title{
-                    margin-top: 100px;
+                    margin-top: 50px;
                 }
                 .title{
                     font-size: 32px;
@@ -254,30 +284,39 @@
                     margin-bottom: 20px;
         
                 }
-                .content-img{
-                    width: 90%;
+                .content-img {
+                    width: 80%;
                     margin: 0 auto;
-                    position: relative;
-        
-                    .more{
+                    position: relative; // ←これが必要！重ねるため
+                    z-index: 20;
+                
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                
+                    .more {
                         position: absolute;
-                        bottom: -180px;
-                        left: 0px;
+                        bottom:-50px; // 画像のどの位置に重ねたいか調整（例：下部）
+                        left: 50%;
+                        transform: translateX(-50%); // 中央に配置
                         padding: 20px 30px;
-                        background-color: #ffffff;
-                        width: 250px;
-                        
-                        p{
-                            font-size:15px ;
+                        background-color: #ffffff; // ← 白背景
+                        width: 200px;
+                        z-index: 100;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.1); // ←見やすくするための影（任意）
+                
+                        p {
+                            font-size: 12px;
                         }
-                        .link{
+                
+                        .link {
                             margin-top: 20px;
                             border: 1px solid #EF9C66;
                             border-radius: 30px;
                             padding: 0 50px;
                             color: #EF9C66;
                         }
-            
                     }
                 }
 

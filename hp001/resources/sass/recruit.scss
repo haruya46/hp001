@@ -14,50 +14,40 @@
             padding-top: 100px;
             border-radius: 0 0 20px 20px;
             // top
-            .top{
-                .top-image{
-                    margin-top: 100px;
-                    display: inline;
-                    width:100%;
+            .top {
+                .top-image {
+                    display: inline-block;
+                    width: 100%;
                     height: 500px;
+                    text-align: center;
                     position: relative;
-                    
-                    img{
+            
+                    img {
                         width: 100%;
-                        height: 500px;
-                        object-fit:cover;
-                        object-position: 0px -30px ;
-                        box-shadow: 0px -60px 30px rgba(255, 153, 0, 0.2), /* 上方向の影 */
-                        0px 60px 30px rgba(255, 153, 0, 0.2);  /* 下方向の影 */
+                        max-height: 500px;
+                        object-fit: cover;
+                        object-position: 0px -30px;
                     }
-        
-                    .sab-title{
+            
+                    p, h3 {
                         position: absolute;
-                        bottom:90px;
-                        left: -50px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #ffffff;
+                        text-align: center;
+                    }
+            
+                    p {
                         font-size: 20px;
-                        color: #ffffff;
-
-                        
+                        margin-top: -40px; // h3との位置を調整（任意）
                     }
-                    h3{
-                        position: absolute;
-                        bottom:50px;
-                        left: -70px;
+            
+                    h3 {
                         font-size: 34px;
-                        color: #ffffff;
-
-                    }
-                    .handwriting{
-                        position: absolute;
-                        bottom:-10px;
-                        right: 0px;
-                        font-size: 34px;
-                        color: #ffffff;
-                        transform: rotate(-10deg);
+                        margin-top: 20px; // pとのバランスを取る
                     }
                 }
-                
             }
 
             .full-time{
@@ -237,6 +227,7 @@
                     width:100%;
                     height: 500px;
                     position: relative;
+                    background-color: #EF9C66;
                     .mobile-company-text{
                         position: fixed; // ← relativeではなくfixedに変更
                         top: -70px;
@@ -251,43 +242,45 @@
                         z-index: 50;
                     }
                     
-                    .top-image{
-                        img{
+                    .top-image {
+                        display: inline-block;
+                        width: 100%;
+                        max-height: 400px;
+                        text-align: center;
+                        position: relative;
+                        object-fit: cover;
+                        background-color: #EF9C66;
+                
+                        img {
                             width: 100%;
-                            height: 700px;
-                            object-fit:cover;
-                            object-position:center ;
-                            box-shadow:none;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: 0px -30px;
                         }
-                        .sab-title{
+                
+                        p, h3 {
                             position: absolute;
-                            top:280px;
-                            left: -50px;
-                            font-size: 20px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                             color: #ffffff;
-    
-                            
+                            text-align: center;
                         }
-                        h3{
-                            position: absolute;
-                            top:300px;
-                            left: -70px;
+                
+                        p {
+                            font-size: 15px;
+                            margin-top: -40px; // h3との位置を調整（任意）
+                        }
+                
+                        h3 {
                             font-size: 34px;
-                            color: #ffffff;
-    
-                        }
-                        .handwriting{
-                            bottom: 30px;
-                            right: 0px;
-                            font-size: 20px;
-                            width: 200px;
-                            color: #ffffff;
-                            transform: rotate(-10deg);
+                            margin-top: 20px; // pとのバランスを取る
                         }
                     }
     
                 }
                 .full-time{
+                    margin-top: -10px;
                     padding-top: 100px;
                     padding-bottom:50px ;
                     background-color: #EF9C66;
