@@ -25,7 +25,7 @@
       "@type": "Organization",
       "name": "i‑Trek 株式会社",
       "url": "{{ url('/') }}",
-      "logo": "{{ asset('image/logo.png') }}",
+      "logo": "{{ asset('storage/image/logo.png') }}",
       "description": "@yield('description', 'i‑Trekは「好きなことを原動力に、1人1人が自分らしい一歩を踏み出す。仲間と共に挑戦し続けることで、まだ誰も見たことのない景色を一緒に目指していく。そんな思いが集まる場所です。')",
       "service": [
         {
