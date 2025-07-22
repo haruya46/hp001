@@ -109,18 +109,18 @@ class HpController extends Controller
         }
 
         // reCAPTCHA検証
-        $recaptcha = $request->input('g-recaptcha-response');
-        if (!$recaptcha) {
-            return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
-        }
-        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => '6LcA0osrAAAAAA87TZbz1TsgvG2RFMHTX7HLzyYw',
-            'response' => $recaptcha,
-            'remoteip' => $request->ip(),
-        ]);
-        if (!$response->json('success')) {
-            return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
-        }
+        // $recaptcha = $request->input('g-recaptcha-response');
+        // if (!$recaptcha) {
+        //     return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
+        // }
+        // $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+        //     'secret' => '6LcA0osrAAAAAA87TZbz1TsgvG2RFMHTX7HLzyYw',
+        //     'response' => $recaptcha,
+        //     'remoteip' => $request->ip(),
+        // ]);
+        // if (!$response->json('success')) {
+        //     return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
+        // }
 
         // 入力バリデーション
         $validated = $request->validate([
