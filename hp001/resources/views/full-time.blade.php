@@ -130,6 +130,7 @@
                         <p>電話番号</p>
                         <input type="tel" class="input-text" name="tel">
                         <p>希望雇用形態※求職者のみ回答</p>
+                        <input type="text" name="website" style="display:none">
                         <select name="employment" class="input-text">
                             <option value="選択なし">選択なし</option>
                             <option value="正社員">正社員</option>
@@ -148,6 +149,8 @@
                                 {{ session('message') }}
                             </div>
                         @endif
+                        <div class="g-recaptcha" data-sitekey="6LcA0osrAAAAAA87TZbz1TsgvG2RFMHTX7HLzyYw"></div>
+                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                         <div class="sabmit">
                             <input type="submit">
                         </div>

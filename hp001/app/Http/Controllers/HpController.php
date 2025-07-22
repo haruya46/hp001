@@ -17,6 +17,7 @@ use App\Models\parttime;
 use App\Models\selfemployed;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactForm;
+use Illuminate\Support\Facades\Http;
 
 class HpController extends Controller
 {
@@ -102,7 +103,39 @@ class HpController extends Controller
 
     public function contact_store(Request $request)
     {
-        $inputs = $request->only(['name', 'email', 'tel','employment','genre', 'content']);
+        // Honeypot（スパム対策）バリデーション
+        if ($request->filled('website')) {
+            return back()->with('message', 'スパム判定されました。入力内容を確認してください');
+        }
+
+        // reCAPTCHA検証
+        $recaptcha = $request->input('g-recaptcha-response');
+        if (!$recaptcha) {
+            return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
+        }
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => '6LcA0osrAAAAAA87TZbz1TsgvG2RFMHTX7HLzyYw',
+            'response' => $recaptcha,
+            'remoteip' => $request->ip(),
+        ]);
+        if (!$response->json('success')) {
+            return back()->with(['error' => 'reCAPTCHA認証に失敗しました。']);
+        }
+
+        // 入力バリデーション
+        $validated = $request->validate([
+            'name' => ['nullable', 'string', 'max:50'],
+            'email' => ['nullable', 'email', 'max:255'],
+            'tel' => ['nullable', 'regex:/^0[0-9]{9,10}$/'],
+            'employment' => ['nullable', 'string', 'max:50'],
+            'genre' => ['nullable', 'string', 'max:50'],
+            'content' => ['nullable', 'string', 'max:2000'],
+        ], [
+            'email.email' => 'メールアドレスの形式が正しくありません。',
+            'tel.regex' => '電話番号の形式が正しくありません。',
+        ]);
+
+        $inputs = $request->only(['name', 'email', 'tel','website','employment','genre', 'content']);
     
         $adminEmail = config('mail.admin');
     
