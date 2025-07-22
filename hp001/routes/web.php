@@ -22,7 +22,6 @@ Route::controller(HpController::class)->group(function () {
 
 
 
-
 // ログインユーザー
 
 Route::middleware('auth')->group(function () {
