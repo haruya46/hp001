@@ -33,7 +33,7 @@
             "name": "トップページ",
             "description": "ホームページ",
             "url": "{{ url('/') }}"
-          },
+        },
         {
           "@type": "Service",
           "name": "ビジネス",
@@ -58,7 +58,7 @@
         "contactType": "customer support",
         "areaServed": "JP",
         "availableLanguage": "Japanese"
-      },
+      }
     }
     </script>
 
