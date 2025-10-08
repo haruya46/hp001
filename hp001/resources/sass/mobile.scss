@@ -30,16 +30,16 @@
                     }
                     .top-title-area{
                         position: absolute;
-                        bottom:-50px; // 画像のどの位置に重ねたいか調整（例：下部）
-                        left: 50%;
+                        bottom:-50px;
+                        left: 0%;
                         transform: translateX(-50%);
-                        width: 80%; /* スマホ対応: はみ出さないように調整 */
+                        width: 100%; /* スマホ対応: はみ出さないように調整 */
                         max-width: 500px; /* デスクトップでは幅500pxまで */
                         background-color: #ffffff;
                         border: 5px solid #D9D9D9;
                         text-align: center;
+                        padding: 10px;
                         p{
-                            margin-top: 40px;
                             font-size: 20px;                
                         }
                         span{
@@ -208,10 +208,16 @@
                     .top-image{
 
                         .top-title-area{
-                            position: absolute !important;
-                            top: 120%;
-                            width: 130%;
-                            height: auto;
+                            position: absolute;
+                            bottom:-50px;
+                            left: 0%;
+                            transform: translateX(-50%);
+                            width: 120%; /* スマホ対応: はみ出さないように調整 */
+                            max-width: 500px; /* デスクトップでは幅500pxまで */
+                            background-color: #ffffff;
+                            border: 5px solid #D9D9D9;
+                            text-align: center;
+                            padding: 10px;
                             p{
                                 font-size: 20px;                
                             }
