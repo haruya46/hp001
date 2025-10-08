@@ -67,7 +67,7 @@
             .recruitment-img{
                 margin-top: 50px;
                 img{
-                    height: 300px;
+                
                     width: 100%;
                     object-fit:cover;
                     object-position: center;
@@ -282,7 +282,6 @@
                 .top{
                     position: relative;
                     width: 100;
-                    height: 500px;
 
                     .mobile-company-text{
                         position: fixed; // ← relativeではなくfixedに変更

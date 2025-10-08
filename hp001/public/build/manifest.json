@@ -11,7 +11,7 @@
     "isEntry": true
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-WAXUZBqC.css",
+    "file": "assets/app-zJUq0BQx.css",
     "src": "resources/sass/app.scss",
     "isEntry": true
   },
@@ -31,22 +31,22 @@
     "isEntry": true
   },
   "resources/sass/fulltime.scss": {
-    "file": "assets/fulltime-D_0mBiV8.css",
+    "file": "assets/fulltime-CUdbtyeT.css",
     "src": "resources/sass/fulltime.scss",
     "isEntry": true
   },
   "resources/sass/mobile.scss": {
-    "file": "assets/mobile-Cfo-dFEw.css",
+    "file": "assets/mobile-Byr-DmNg.css",
     "src": "resources/sass/mobile.scss",
     "isEntry": true
   },
   "resources/sass/parttime.scss": {
-    "file": "assets/parttime-D1W8mKbu.css",
-    "src": "resources/sass/parttime.scss",
+    "file": "assets/fulltime-CUdbtyeT.css",
+    "src": "resources/sass/fulltime.scss",
     "isEntry": true
   },
   "resources/sass/pest.scss": {
-    "file": "assets/mobile-Cfo-dFEw.css",
+    "file": "assets/mobile-Byr-DmNg.css",
     "src": "resources/sass/mobile.scss",
     "isEntry": true
   },
@@ -56,12 +56,12 @@
     "isEntry": true
   },
   "resources/sass/selfemployed.scss": {
-    "file": "assets/parttime-D1W8mKbu.css",
-    "src": "resources/sass/parttime.scss",
+    "file": "assets/fulltime-CUdbtyeT.css",
+    "src": "resources/sass/fulltime.scss",
     "isEntry": true
   },
   "resources/sass/ses.scss": {
-    "file": "assets/mobile-Cfo-dFEw.css",
+    "file": "assets/mobile-Byr-DmNg.css",
     "src": "resources/sass/mobile.scss",
     "isEntry": true
   }
