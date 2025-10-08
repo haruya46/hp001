@@ -36,7 +36,7 @@
     "isEntry": true
   },
   "resources/sass/mobile.scss": {
-    "file": "assets/mobile-DOMsoMYP.css",
+    "file": "assets/mobile-D7xWH_OZ.css",
     "src": "resources/sass/mobile.scss",
     "isEntry": true
   },
@@ -46,8 +46,8 @@
     "isEntry": true
   },
   "resources/sass/pest.scss": {
-    "file": "assets/mobile-DOMsoMYP.css",
-    "src": "resources/sass/mobile.scss",
+    "file": "assets/pest-DOMsoMYP.css",
+    "src": "resources/sass/pest.scss",
     "isEntry": true
   },
   "resources/sass/recruit.scss": {
