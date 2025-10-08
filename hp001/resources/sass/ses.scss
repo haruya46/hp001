@@ -208,8 +208,7 @@
                         .top-title-area{
                             position: absolute !important;
                             top: 120%;
-                            left: 0%;
-                            transform: translate(-50%, -50%);
+                            transform: translate(40%, -50%);
                             width: 130%;
                             height: auto;
                             p{
@@ -229,38 +228,7 @@
         
                             }
                         }
-                        // display: inline-block;
-                        // width: 100%;
-                        // height: 500px;
-                        // text-align: center;
-                        // position: relative;
-                
-                        // img {
-                        //     width: 100%;
-                        //     height: 100%;
-                        //     max-height: 700px;
-                        //     object-fit: cover;
-                        //     object-position: 0px -30px;
-                        // }
-                
-                        // p, h3 {
-                        //     position: absolute;
-                        //     top: 50%;
-                        //     left: 50%;
-                        //     transform: translate(-50%, -50%);
-                        //     color: #ffffff;
-                        //     text-align: center;
-                        // }
-                
-                        // p {
-                        //     font-size: 15px;
-                        //     margin-top: -40px; // h3との位置を調整（任意）
-                        // }
-                
-                        // h3 {
-                        //     font-size: 34px;
-                        //     margin-top: 20px; // pとのバランスを取る
-                        // }
+                    
                     }
                 }
              
